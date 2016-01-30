@@ -1,16 +1,36 @@
-\documentclass[12pt, a4paper]{book}
+\documentclass[10pt, a4paper, twocolumn]{book}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{textcase}
+\usepackage{lipsum}
+
+\usepackage{showframe}
+\usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm]{geometry}
 
 \title{Outback}
 \author{Matt Brennan}
+\date{}
+
+\newfontfamily\titlefont[]{AgencyFB Black}
+\newfontfamily\cursivefont[]{Painted Lady}
+\renewcommand{\maketitlehooka}{\titlefont}
+\titleformat{\chapter}[block]{\cursivefont\huge}{}{0pt}{}
+\titleformat{\section}[block]{\bfseries\LARGE}{}{0pt}{}
+\setromanfont{Interstate Light}
+\setlength{\columnsep}{1cm}
+\titlespacing{\chapter}{0pt}{0pt}{0pt}
+\renewcommand{\baselinestretch}{1.1}
 
 \begin{document}
 
-\frontmatter
 \maketitle
 \tableofcontents
 
-\mainmatter
 \chapter{Combat}
-Hello
+\lipsum[1]
+
+\section{Rolling dice}
+\lipsum
 
 \end{document}
