@@ -1,0 +1,49 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage[toc]{multitoc}
+\usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm]{geometry}
+
+% font defs
+\newfontfamily\titlefont[]{AgencyFB Black}
+\newfontfamily\cursivefont[]{Painted Lady}
+
+% font impl
+\setromanfont{DIN Next LT Pro Light}
+
+% title fonts
+\pretitle{\begin{center}\fontsize{50}{60}\titlefont}
+\titleformat{\chapter}[block]{\cursivefont\huge}{}{0pt}{}
+\titleformat{\section}[block]{\bfseries\scshape\LARGE}{}{0pt}{}
+\titleformat{\subsection}[block]{\bfseries\scshape\large}{}{0pt}{}
+
+% toc styling
+\setcounter{tocdepth}{1}
+
+% headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{\cursivefont\large\color{black!60}\thepage} % Left Even, Right Odd
+\renewcommand{\headrulewidth}{0pt}
+
+% spacing
+\titlespacing{\chapter}{0pt}{0pt}{0pt}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\renewcommand{\baselinestretch}{1.1}
+\setlength{\columnsep}{1cm}
+
+% no blank pages after cover and toc
+\let\cleardoublepage\clearpage
+
+% chapter pages in frontmatter should be empty and in mainmatter should be fancy
+\patchcmd{\chapter}{plain}{empty}{}{}
+\let\oldmainmatter\mainmatter
+\renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}
