@@ -9,6 +9,7 @@
 \usepackage{fancyhdr}
 \usepackage{etoolbox}
 \usepackage{xcolor}
+\usepackage[toc]{multitoc}
 
 \usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm]{geometry}
 
@@ -36,13 +37,14 @@
 % Left Even, Right Odd
 \fancyfoot[LE,RO]{\cursivefont\large\color{black!60}\thepage}
 \renewcommand{\headrulewidth}{0pt}
+\setcounter{tocdepth}{1}
 
 \begin{document}
 \frontmatter
+
 {\let\cleardoublepage\clearpage
 \maketitle
-\tableofcontents
-}
+\tableofcontents}
 
 \patchcmd{\chapter}{empty}{fancy}{}{}
 \mainmatter
