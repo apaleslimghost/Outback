@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{etoolbox}
 \usepackage{xcolor}
+\usepackage{wrapfig}
 \usepackage[toc]{multitoc}
 \usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm]{geometry}
 
@@ -15,13 +16,23 @@
 \newfontfamily\cursivefont[]{REDRUM}
 
 % font impl
-\setromanfont{DIN Next LT Pro Light}
+% \setromanfont[
+% BoldFont={DIN Next LT Pro Bold},
+% BoldItalicFont={DIN Next LT Pro Bold Italic},
+% ItalicFont={DIN Next LT Pro Italic}
+% ]{DIN Next LT Pro Light}
+
+\setmainfont[
+% BoldFont={DIN Next LT Pro Bold},
+% BoldItalicFont={DIN Next LT Pro Bold Italic},
+% ItalicFont={DIN Next LT Pro Italic}
+]{DIN Next LT Pro Light}
 
 % title fonts
 \pretitle{\begin{center}\fontsize{50}{60}\titlefont}
 \titleformat{\chapter}[block]{\cursivefont\Huge}{}{0pt}{}
-\titleformat{\section}[block]{\bfseries\scshape\LARGE}{}{0pt}{}
-\titleformat{\subsection}[block]{\bfseries\scshape\large}{}{0pt}{}
+\titleformat{\section}[block]{\bfseries\LARGE}{}{0pt}{}
+\titleformat{\subsection}[block]{\bfseries\large}{}{0pt}{}
 
 % subtitle
 \newcommand{\subtitle}[1]{%
@@ -54,3 +65,7 @@
 \patchcmd{\chapter}{plain}{empty}{}{}
 \let\oldmainmatter\mainmatter
 \renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}
+
+% shorthand commands
+\newcommand{\die}[1]{\emph{\textbf{#1}}}
+\newcommand{\stat}[1]{\textbf{#1}}
