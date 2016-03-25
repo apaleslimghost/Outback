@@ -63,6 +63,7 @@
 
 % chapter pages in frontmatter should be empty and in mainmatter should be fancy
 \patchcmd{\chapter}{plain}{empty}{}{}
+\providecommand{\mainmatter}{}
 \let\oldmainmatter\mainmatter
 \renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}
 
