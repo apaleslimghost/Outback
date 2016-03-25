@@ -9,7 +9,7 @@
 \usepackage{xcolor}
 \usepackage{wrapfig}
 \usepackage[toc]{multitoc}
-\usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm]{geometry}
+\usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm, left=1cm]{geometry}
 
 % font defs
 \newfontfamily\titlefont[]{AgencyFB Black}
@@ -30,6 +30,7 @@
 
 % title fonts
 \pretitle{\begin{center}\fontsize{50}{60}\titlefont}
+\renewcommand{\maketitlehookd}{\vspace{-2ex}}
 \titleformat{\chapter}[block]{\cursivefont\Huge}{}{0pt}{}
 \titleformat{\section}[block]{\bfseries\LARGE}{}{0pt}{}
 \titleformat{\subsection}[block]{\bfseries\large}{}{0pt}{}
@@ -65,7 +66,7 @@
 \patchcmd{\chapter}{plain}{empty}{}{}
 \providecommand{\mainmatter}{}
 \let\oldmainmatter\mainmatter
-\renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}
+\renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}\providecommand{\mainmatter}{}
 
 % shorthand commands
 \newcommand{\die}[1]{\emph{\textbf{#1}}}

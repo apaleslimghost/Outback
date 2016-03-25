@@ -1,9 +1,10 @@
 \documentclass[10pt, a4paper, twocolumn]{article}
 \usepackage{outback}
 
-\title{\uppercase{OUTBACK}}
+\title{\uppercase{Outback}}
 \subtitle{Cheat sheet}
 \date{}
+\pagenumbering{gobble}
 
 \begin{document}
 \maketitle
@@ -18,6 +19,55 @@ roll, and that's your score. If your score is greater than your
 opponent's, you succeeds; otherwise, your opponent succeeds. The difference
 between the scores could factor into the result, depending on the roll, so keep
 a note of it.
+
+\subsection{Halving and rounding}
+Sometimes, we need to half a number. We don't want fractions, so we
+\emph{round down}. Positive numbers round \emph{towards zero}, i.e. 4.5
+rounded down is 4. Negative numbers round \emph{away from zero}, i.e. -2.5
+rounded down is -3.
+
+\subsection{Combined modifiers}
+Sometimes, such as when rolling for Driving checks, you combine two
+modifiers. To do this, take the average of the two modifiers (i.e. add them
+together and half the total), rounding down. For example, if your \stat{Wit}
+modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier is +3. 
++4 and -3 combined is 0.
+
+\section{Stats}
+The three stats that sum up a character's ability are \stat{Brains} (problem
+solving, navigation, repair,  etc), \stat{Brawn} (physical strength, taking a
+hit, running, jumping, etc) and \stat{Wit} (quick thinking, driving,
+initiative, bartering, etc).
+
+\begin{wraptable}[11]{l}{0.13\textwidth}
+\vspace*{-10pt}
+\begin{tabular}{cc}
+  Stat  & Modifier \\
+  \hline 
+  0     & -5       \\
+  1-2   & -4       \\
+  3-4   & -3       \\
+  5-6   & -2       \\
+  7-8   & -1       \\
+  9-10  &  0       \\
+  11-12 & +1       \\
+  13-14 & +2       \\
+  15-16 & +3       \\
+  17-18 & +4       \\
+  19-20 & +5
+\end{tabular}
+\vspace*{-10pt}
+\end{wraptable}
+
+These stats are ordinarily from 1 to 20; modifiers
+run from -5 to +5. Calculate your modifier by subtracting 9 and halving
+(rounding down).
+
+\section{Vehicles}
+A vehicle is just the sum of its parts. Each part confers stats to the vehicle's
+total, and can be upgraded separately: swap out your engine, and your
+Acceleration could go up; new tyres might improve your Handling.
+
 \section{Dummy}
 \lipsum{}
 \end{document}
