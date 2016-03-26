@@ -7,8 +7,9 @@
 \pagenumbering{gobble}
 
 \renewcommand{\maketitlehooka}{\vspace{-60pt}}
-\renewcommand{\maketitlehookd}{\vspace{-30pt}\hrule\vspace{-10pt}}
+\renewcommand{\maketitlehookd}{\vspace{-35pt}\hrule\vspace{-15pt}}
 \geometry{bottom=1cm}
+\setlength{\parskip}{5pt}
 
 \begin{document}
 \maketitle
@@ -26,18 +27,17 @@ succeeds; otherwise, your opponent succeeds.
 Depending on the roll, the difference between the scores could factor into the
 result, so keep a note of it. 
 
-\subsection{Dividing and rounding}
-Sometimes, we need to half a number, or divide. We don't want fractions, so we
-\emph{round down}. When rounding down, remove the fractional part from the
-number, so all numbers get closer to zero: 3{1/2} rounded down is 3, while -2{1/2}
-rounded down is -2.
+\subsection{Round down}
+When we divide numbers we \emph{round down}. Remove the fractional part from the
+number, to round towards zero: 3{1/2} rounded down is 3, while -2{1/2} rounded
+down is -2. 
 
 \section{Stats}
 
-\begin{wraptable}[11]{r}{5ex}
+\begin{wraptable}[10]{r}{6ex}
   \small
-\vspace*{-3ex}
-\hspace*{-5.5ex}
+\vspace*{-7ex}
+\hspace*{-4.5ex}
 \begin{tabular}{cc}
   Stat  & Mod \\
   \hline 
@@ -55,10 +55,9 @@ rounded down is -2.
 \end{tabular}
 \end{wraptable}
 
-The three stats that sum up a character's ability are \stat{Brains} (problem
-solving, navigation, repair,  etc), \stat{Brawn} (physical strength, taking a
-hit, running, jumping, etc) and \stat{Wit} (quick thinking, driving,
-initiative, bartering, etc).
+The three stats that sum up a character's ability are \stat{Brains} (puzzles,
+navigation, repair,  etc), \stat{Brawn} (physical strength, taking a hit,
+running, etc) and \stat{Wit} (quick thinking, driving, bartering, etc).
 
 When making a roll that requires a particular skill, add your modifier for the
 appropriate stat to each roll. The GM will decide which stat is appropriate,
@@ -68,17 +67,21 @@ These stats are ordinarily from 0 to 20; modifiers run from -5 to +5. Look up
 modifiers in the table, or calculate by adding 1 to the stat and halving
 (rounding down), then subtracting 5.
 
-\subsection{Vehicles}
+\subsection{Vehicle stats}
 Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling},
-\stat{Acceleration}, \stat{Braking}, \stat{Armour} and \stat{Weight}. A vehicle
+\stat{Acceleration}, \stat{Braking}, \stat{Ruggedness} and \stat{Weight}. A vehicle
 is just the sum of its parts. Each part confers stats to the vehicle's total,
-and can be upgraded separately: swap out your engine, and your Acceleration
-could go up; new tyres might improve your Handling. 
+and can be upgraded separately.
+.
+\stat{Speed} is different. It's not 0-20 like the others, but from 0 to your
+vehicle's \stat{Maximum Speed}. It changes as you man\oe{}uvre your vehicle.
+Convert it to a 0-20 stat by dividing by 10 (just remove the last number), and
+to a modifier from the stat in the usual way.
 
-\stat{Speed} is not an ordinary stat. It's not 0-20 like the others, but from 0
-to your vehicle's \stat{Maximum Speed}. It changes as you man\oe{}uvre your
-vehicle. Convert it to a 0-20 stat by dividing by 10 (just remove the last
-number), and to a modifier from the stat in the usual way.
+\subsection{Hit points}
+\emph{Hit points (HP)} are you and your vehicle's ability to keep going. A
+character's \emph{Maximum HP} is equal to 3 times their \stat{Brawn} stat. A
+vehicle's Maximum HP is 5 times its \stat{Ruggedness} stat.
 
 \subsection{Combined modifiers}
 Sometimes, such as when rolling for Driving checks, you combine two
@@ -88,15 +91,13 @@ modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
 is +3.
 
 \subsection{Creating a character}
-First, generate stats in one of the following ways:\\
+Generate your three stats in one of the following ways:\\
 \textbf{Dice:} roll \die{5d4} for each stat\\
 \textbf{Points:} choose three from 6 to 17, totalling no more than 40\\
 \textbf{Array:} assign 9, 14 and 17 to your stats
 
-Next, choose three skills from the list to become \emph{trained} in. Rolls in
+Finally, choose three skills from the list to become \emph{trained} in. Rolls in
 trained skills add an extra +1 to the modifier.
-
-Finally, 
 
 \section{Combat}
 Time in combat is broken down into \emph{ticks}, an abstract time period that
@@ -104,10 +105,10 @@ can be taken to be approximately one second. During a tick, all parties that
 can do take action simultaneously. An \emph{action} could be making an attack,
 man\oe{}uvring your vehicle, or something else.
 
-\begin{wraptable}[6]{l}{8ex}
+\begin{wraptable}[6]{l}{10ex}
   \small
-\vspace*{-3ex}
-\hspace*{-5.5ex}
+\vspace*{-3.5ex}
+\hspace*{-4ex}
 \begin{tabular}{cc}
   Cooldown & Ticks \\
   \hline 
@@ -128,8 +129,12 @@ the table.
 Vehicles are tracked on and off the road by three variables: \emph{position},
 \emph{speed} and \emph{direction}. Position and direction are always relative.
 During combat, the GM will keep track, and announce for each NPC combatant.
+
 Here's an example: ``a Spotter, 50 feet ahead, at 60mph; a Rig, 70 feet ahead,
 at 55mph, and a Prickles, 600 feet ahead, at 90mph, coming towards you''.
+
+When making a driving-related die roll, combine your Driving skill modifier with
+the stat modifier from the vehicle.
 
 \subsubsection{Man\oe{}uvring}
 Altering your speed, taking corners, and so on are all done by special actions
@@ -139,9 +144,8 @@ simultaneously.
 
 Most man\oe{}uvres do not require a roll to succeed. It's not difficult to push
 down a gas pedal, after all. It does take skill to squeeze out every bit of
-performance from your vehicle, so for some man\oe{}uvres such as Accelerate, you
-roll \die{2d8} plus half the appropriate modifier to determine how much your
-speed changes.
+performance from your vehicle. For some man\oe{}uvres, you roll dice to
+determine how great an effect they have.
 
 You do not always have to choose between action and man\oe{}uvre: if you have
 already taken a non-man\oe{}uvre action, you can still take an Instant
@@ -149,6 +153,10 @@ man\oe{}uvre in the same tick.
 
 If you cannot (or choose not to) man\oe{}uvre in a tick, you must take the
 man\oe{}uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
+
+\subsubsection{Damage, afflictions and repair}
+Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
+states otherwise. When a vehicle is reduced to zero hit points
 
 \subsection{Hand-to-hand combat}
 
