@@ -8,7 +8,7 @@
 
 \renewcommand{\maketitlehooka}{\vspace{-60pt}}
 \renewcommand{\maketitlehookd}{\vspace{-35pt}\hrule\vspace{-15pt}}
-\geometry{bottom=1cm}
+\geometry{bottom=0.75cm, left=0.75cm, right=0.75cm, top=0.75cm}
 \setlength{\parskip}{5pt}
 
 \begin{document}
@@ -83,13 +83,6 @@ to a modifier from the stat in the usual way.
 character's \emph{Maximum HP} is equal to 3 times their \stat{Brawn} stat. A
 vehicle's Maximum HP is 5 times its \stat{Ruggedness} stat.
 
-\subsection{Combined modifiers}
-Sometimes, such as when rolling for Driving checks, you combine two
-modifiers. To do this, take the average of the two modifiers (add them
-together and half the total), rounding down. For example, if your \stat{Wit}
-modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
-is +3.
-
 \subsection{Creating a character}
 Generate your three stats in one of the following ways:\\
 \textbf{Dice:} roll \die{5d4} for each stat\\
@@ -98,6 +91,13 @@ Generate your three stats in one of the following ways:\\
 
 Finally, choose three skills from the list to become \emph{trained} in. Rolls in
 trained skills add an extra +1 to the modifier.
+
+\subsection{Combined modifiers}
+Sometimes, such as when rolling for Driving checks, you combine two
+modifiers. To do this, take the average of the two modifiers (add them
+together and half the total), rounding down. For example, if your \stat{Wit}
+modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
+is +3.
 
 \section{Combat}
 Time in combat is broken down into \emph{ticks}, an abstract time period that
@@ -156,7 +156,7 @@ man\oe{}uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
 
 \subsubsection{Damage, afflictions and repair}
 Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
-states otherwise. When a vehicle is reduced to zero hit points
+states otherwise. When a vehicle is reduced to zero hit points TODO
 
 \subsection{Hand-to-hand combat}
 
