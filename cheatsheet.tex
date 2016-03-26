@@ -35,7 +35,7 @@ solving, navigation, repair,  etc), \stat{Brawn} (physical strength, taking a
 hit, running, jumping, etc) and \stat{Wit} (quick thinking, driving,
 initiative, bartering, etc).
 
-\begin{wraptable}[11]{l}{0.13\textwidth}
+\begin{wraptable}[12]{l}{0.13\textwidth}
 \vspace*{-3ex}
 \begin{tabular}{cc}
   Stat  & Modifier \\
@@ -55,9 +55,15 @@ initiative, bartering, etc).
 \vspace*{-10pt}
 \end{wraptable}
 
+Vehicles have separate sets of stats: \stat{Handling}, \stat{Acceleration},
+\stat{Speed}, \stat{Braking}, \stat{Armour} and \stat{Weight}. A vehicle is just
+the sum of its parts. Each part confers stats to the vehicle's total, and can be
+upgraded separately: swap out your engine, and your Acceleration could go up;
+new tyres might improve your Handling.
+
 These stats are ordinarily from 0 to 20; modifiers
 run from -5 to +5. Calculate your modifier by subtracting 9 and halving
-(rounding down).
+(rounding down), or by using the table.
 
 \subsection{Combined modifiers}
 Sometimes, such as when rolling for Driving checks, you combine two
@@ -66,10 +72,6 @@ together and half the total), rounding down. For example, if your \stat{Wit}
 modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier is +3. 
 +4 and -3 combined is 0.
 
-\section{Vehicles}
-A vehicle is just the sum of its parts. Each part confers stats to the vehicle's
-total, and can be upgraded separately: swap out your engine, and your
-Acceleration could go up; new tyres might improve your Handling.
 
 \section{Dummy}
 \lipsum{}
