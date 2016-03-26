@@ -83,7 +83,18 @@ Sometimes, such as when rolling for Driving checks, you combine two
 modifiers. To do this, take the average of the two modifiers (add them
 together and half the total), rounding down. For example, if your \stat{Wit}
 modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
-is +3. +4 and -3 combined is 0.
+is +3.
+
+\subsection{Creating a character}
+First, generate stats in one of the following ways:\\
+\textbf{Dice:} roll \die{5d4} for each stat\\
+\textbf{Points:} choose three from 6 to 17, totalling no more than 40\\
+\textbf{Array:} assign 9, 14 and 17 to your stats
+
+Next, choose three skills from the list to become \emph{trained} in. Rolls in
+trained skills add an extra +1 to the modifier.
+
+Finally, 
 
 \section{Combat}
 Time in combat is broken down into \emph{ticks}, an abstract time period that
@@ -110,25 +121,30 @@ action you can move in the next tick. The possible cooldown lengths are shown in
 the table. 
 
 \subsection{Vehiclular combat}
+Vehicles are tracked on and off the road by three variables: \emph{position},
+\emph{speed} and \emph{direction}. Position and direction are always relative.
+During combat, the GM will keep track, and announce for each NPC combatant.
+Here's an example: ``a Spotter, 50 feet ahead, at 60mph; a Rig, 70 feet ahead,
+at 55mph, and a Prickles, 600 feet ahead, at 90mph, coming towards you''.
 
 \subsubsection{Man\oe{}uvring}
-Some actions are called \emph{man\oe{}uvres}. These involve changes to the speed,
-heading, position, etc.\ of your vehicle. Man\oe{}uvres are taken like ordinary
-actions, but do not have effect until the end of the tick. All man\oe{}uvres in a
-tick execute simultaneously.
+Altering your speed, taking corners, and so on are all done by special actions
+called \emph{man\oe{}uvres}. They are taken like ordinary actions, but do not
+have effect until the end of the tick. All man\oe{}uvres in a tick execute
+simultaneously. 
 
 Most man\oe{}uvres do not require a roll to succeed. It's not difficult to push
-down a gas pedal, after all. It does require skill to squeeze out every bit of
+down a gas pedal, after all. It does take skill to squeeze out every bit of
 performance from your vehicle, so for some man\oe{}uvres such as Accelerate, you
 roll \die{2d8} plus half the appropriate modifier to determine how much your
 speed changes.
 
-You do not always have to choose between action an man\oe{}uvre: if you have
+You do not always have to choose between action and man\oe{}uvre: if you have
 already taken a non-man\oe{}uvre action, you can still take an Instant
 man\oe{}uvre in the same tick.
 
 If you cannot (or choose not to) man\oe{}uvre in a tick, you must take the
-man\oe{]uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
+man\oe{}uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
 
 \subsection{Hand-to-hand combat}
 
