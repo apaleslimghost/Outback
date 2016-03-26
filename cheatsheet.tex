@@ -75,10 +75,50 @@ run from -5 to +5. Calculate your modifier by subtracting 9 and halving
 Sometimes, such as when rolling for Driving checks, you combine two
 modifiers. To do this, take the average of the two modifiers (i.e. add them
 together and half the total), rounding down. For example, if your \stat{Wit}
-modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier is +3. 
-+4 and -3 combined is 0.
+modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
+is +3. +4 and -3 combined is 0. 
 
+\section{Combat}
+
+Time in combat is broken down into \emph{ticks}, an abstract time period that
+can be taken to be approximately one second. During a tick, all parties that
+can do take action simultaneously. An \emph{action} could be making an attack,
+man\oe{}ving your vehicle, or something else.
+
+\begin{wraptable}[7]{l}{0.13\textwidth}
+\vspace*{-3ex}
+\begin{tabular}{cc}
+  Cooldown & Ticks \\
+  \hline 
+  Instant  & 1     \\
+  Quick    & 2     \\
+  Steady   & 3     \\
+  Slow     & 5     \\
+  Long     & 8
+\end{tabular}
+\end{wraptable}
+
+Each action has a \emph{cooldown} period, which is a number of ticks before you
+can take action again. This includes the current tick, so after an
+\emph{instant} action, you can move in the next tick. The possible cooldown
+lengths are shown in the table.
+
+\subsection{Man\oe{}vring}
+Some actions are called \emph{man\oe{}uvres}. These involve changes to the speed,
+heading, position, etc.\ of your vehicle. Man\oe{}uvres are taken like ordinary
+actions, but do not have effect until the end of the tick. All man\oe{}uvres in a
+tick execute simultaneously.
+
+You do not always have to choose between action an man\oe{}uvre: if you have
+already taken a non-man\oe{}uvre action, you can still take an Instant
+man\oe{}uvre in the same tick. 
+
+
+
+\subsection{Veheicle combat}
+\subsection{Melee combat}
 
 \section{Dummy}
 \lipsum{}
+
 \end{document}
