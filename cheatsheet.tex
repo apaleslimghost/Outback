@@ -108,7 +108,9 @@ can take action again. This includes the current tick, so after an Instant
 action you can move in the next tick. The possible cooldown lengths are shown in
 the table. 
 
-\subsection{Man\oe{}uvring}
+\subsection{Vehiclular combat}
+
+\subsubsection{Man\oe{}uvring}
 Some actions are called \emph{man\oe{}uvres}. These involve changes to the speed,
 heading, position, etc.\ of your vehicle. Man\oe{}uvres are taken like ordinary
 actions, but do not have effect until the end of the tick. All man\oe{}uvres in a
@@ -122,14 +124,17 @@ speed changes.
 
 You do not always have to choose between action an man\oe{}uvre: if you have
 already taken a non-man\oe{}uvre action, you can still take an Instant
-man\oe{}uvre in the same tick. 
+man\oe{}uvre in the same tick.
 
+If you cannot (or choose not to) man\oe{}uvre in a tick, you must take the
+man\oe{]uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
 
+\subsection{Hand-to-hand combat}
 
-\subsection{Vehicle combat}
-\subsection{Melee combat}
-
-\section{Dummy}
-\lipsum{}
+Actions and ticks run the same in hand-to-hand combat as for vehicle combat. The only
+differences are movement and proximity. With a melee weapon, or unarmed, you can
+only attack a combatant within 3 feet of you, unless the weapon states
+otherwise. As an Instant man\oe{}uvre, you can run a number of feet up to 10
+plus your \stat{Brawn} modifier. 
 
 \end{document}
