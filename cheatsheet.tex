@@ -25,11 +25,11 @@ succeeds; otherwise, your opponent succeeds.
 Depending on the roll, the difference between the scores could factor into the
 result, so keep a note of it. 
 
-\subsection{Halving and rounding}
-Sometimes, we need to half a number. We don't want fractions, so we
-\emph{round down}. Positive numbers round \emph{towards zero}, i.e. 4.5
-rounded down is 4. Negative numbers round \emph{away from zero}, i.e. -2.5
-rounded down is -3.
+\subsection{Dividing and rounding}
+Sometimes, we need to half a number, or divide. We don't want fractions, so we
+\emph{round down}. When rounding down, remove the fractional part from the
+number, so all numbers get closer to zero: 3{1/2} rounded down is 3, while -2{1/2}
+rounded down is -2.
 
 \section{Stats}
 The three stats that sum up a character's ability are \stat{Brains} (problem
@@ -61,25 +61,30 @@ depending on how you roleplay going about the task.
 \end{tabular}
 \end{wraptable}
 
-Vehicles have separate sets of stats: \stat{Handling}, \stat{Acceleration},
-\stat{Speed}, \stat{Braking}, \stat{Armour} and \stat{Weight}. A vehicle is just
-the sum of its parts. Each part confers stats to the vehicle's total, and can be
-upgraded separately: swap out your engine, and your Acceleration could go up;
-new tyres might improve your Handling.
+These stats are ordinarily from 0 to 20; modifiers run from -5 to +5. Calculate
+your modifier by adding 1 and halving (rounding down) then subtracting 5, or by
+using the table.
 
-These stats are ordinarily from 0 to 20; modifiers
-run from -5 to +5. Calculate your modifier by subtracting 9 and halving
-(rounding down), or by using the table.
+\subsection{Vehicles}
+Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling},
+\stat{Acceleration}, stat{Braking}, \stat{Armour} and \stat{Weight}. A vehicle
+is just the sum of its parts. Each part confers stats to the vehicle's total,
+and can be upgraded separately: swap out your engine, and your Acceleration
+could go up; new tyres might improve your Handling. 
+
+\stat{Speed} is not an ordinary stat. It's not 0-20 like the others, but from 0
+to your vehicle's \stat{Maximum Speed}. It changes as you man\oe{}uvre your
+vehicle. Convert it to a 0-20 stat by dividing by 10 (just remove the last
+number), and to a modifier from the stat in the usual way.
 
 \subsection{Combined modifiers}
 Sometimes, such as when rolling for Driving checks, you combine two
-modifiers. To do this, take the average of the two modifiers (i.e. add them
+modifiers. To do this, take the average of the two modifiers (add them
 together and half the total), rounding down. For example, if your \stat{Wit}
 modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
-is +3. +4 and -3 combined is 0. 
+is +3. +4 and -3 combined is 0.
 
 \section{Combat}
-
 Time in combat is broken down into \emph{ticks}, an abstract time period that
 can be taken to be approximately one second. During a tick, all parties that
 can do take action simultaneously. An \emph{action} could be making an attack,
