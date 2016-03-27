@@ -18,26 +18,24 @@
   \end{@twocolumnfalse}
 ]
 
+\section{Welcome to the Wasteland}
+
+\subsection{Scrap}
+The useful leftovers of dead vehicles and scavenged ruins is \emph{scrap}. In
+the Wasteland, it's a currency, buying you gasoline, bullets, even vehicle parts
+and training.
+
 \section{Conflict resolution}
-You and your opponent roll dice to see who succeeds. Your oppenent could be the
-GM, rolling for an NPC or the environment, or it could be another player.
+You and your opponent roll dice to see who succeeds. Your oppenent is usually
+the GM, rolling for an NPC or the environment, or it could be another player.
 
-Each of you rolls a \die{d12}, adding any appropriate modifiers. If the result
-is 12 or higher, mark down ``12'' somewhere, and roll again. Once your roll and
-modifier is less than 12, stop rolling. Add up all your twelves and your final
-roll, and that's your score. If your score is greater than your opponent's, you
-succeeds; otherwise, your opponent succeeds.
-
-Depending on the roll, the difference between the scores could factor into the
-result, so keep a note of it. 
-
-\subsection{Round down}
-When we divide numbers we \emph{round down}. Remove the fractional part from the
-number, to round towards zero: 3{1/2} rounded down is 3, while -2{1/2} rounded
-down is -2. 
+Each of you rolls a \die{d12}, adding modifiers. If the result is 12 or higher,
+write down ``12'', and roll again. Once your roll and modifier is less than 12,
+stop rolling. Add up the twelves and the final roll, and that's the score. If
+your score is greater than your opponent's, you succeeds; otherwise, your
+opponent succeeds.
 
 \section{Stats}
-
 \begin{wraptable}[9]{r}{6ex}
   \small
 \vspace*{-8ex}
@@ -59,56 +57,59 @@ down is -2.
 \end{tabular}
 \end{wraptable}
 
-The three stats that sum up a character's ability are \stat{Brains} (puzzles,
-navigation, repair,  etc), \stat{Brawn} (physical strength, taking a hit,
-running, etc) and \stat{Wit} (quick thinking, driving, bartering, etc).
-
-These stats are ordinarily from 0 to 20; modifiers run from -5 to +5. Look up
-modifiers in the table, or calculate by adding 1 to the stat and halving, then
-subtracting 5.
+The three stats that sum up a character's ability are \stat{Brains} (mental
+aptitude), \stat{Brawn} (physical strength) and \stat{Wit} (quick thinking).
+Most of the time, these will be from 0 to 20, with a modifier from -5 to +5.
 
 Your character might be \emph{trained} in certain skills. For rolls with these
-skills, add 1 to the stat modifier.
+skills, the modifier has an extra +1.
 
 \subsection{Vehicle stats}
 Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling},
 \stat{Acceleration}, \stat{Braking}, \stat{Ruggedness} and \stat{Weight}. A vehicle
-is just the sum of its parts. Each part confers stats to the vehicle's total,
-and can be upgraded separately.
-.
+is just the sum of its parts. Each vehicle part --- engine, transmission, tyres
+etc.\ --- confers stats to the vehicle, and can be upgraded separately.
+
 \stat{Speed} is different. It's not 0-20 like the others, but from 0 to your
-vehicle's \stat{Maximum Speed}. It changes as you man\oe{}uvre your vehicle.
-Convert it to a 0-20 stat by dividing by 10 (just remove the last number), and
-to a modifier from the stat in the usual way.
+vehicle's \stat{Maximum Speed}, in \emph{feet per second}. It changes as you
+man\oe{}uvre your vehicle. Convert it to a 0-20 stat by dividing by 10, and to a
+modifier from the stat in the usual way.
+
+\subsection{Combined modifiers}
+Sometimes, such as when rolling for Driving checks, modifiers from two sources
+apply. Combine them by taking the average of the two modifiers. For example, if
+your \stat{Wit} modifier is +4 and your vehicle's \stat{Handling} is +2, the
+combined modifier is +3.
+
+\section{Creating a character}
+Generate your three \emph{stats} in one of the following ways. \textbf{Dice:}
+roll \die{5d4} for each stat. \textbf{Points:} choose three from 6 to 17,
+totalling no more than 40. \textbf{Array:} assign 9, 14 and 17 to your stats.
+Next, choose three \emph{skills} from the list to become \emph{trained} in.
+Rolls in trained skills add an extra +1 to the modifier. Finally, starting with
+200 scrap, buy \emph{equipment} from the list (or choose one of the standard
+loadouts).
 
 \subsection{Hit points}
 \emph{Hit points (HP)} are you and your vehicle's ability to keep going. A
 character's \emph{Maximum HP} is equal to 3 times their \stat{Brawn} stat. A
 vehicle's Maximum HP is 5 times its \stat{Ruggedness} stat.
 
-\subsection{Creating a character}
-Generate your three stats in one of the following ways:\\
-\textbf{Dice:} roll \die{5d4} for each stat\\
-\textbf{Points:} choose three from 6 to 17, totalling no more than 40\\
-\textbf{Array:} assign 9, 14 and 17 to your stats
-
-Next, choose three skills from the list to become \emph{trained} in. Rolls in
-trained skills add an extra +1 to the modifier.
-
-Finally, TODO equipment
-
-\subsection{Combined modifiers}
-Sometimes, such as when rolling for Driving checks, you combine two
-modifiers. To do this, take the average of the two modifiers (add them
-together and half the total). For example, if your \stat{Wit}
-modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier
-is +3.
+\subsection{Advancement}
+Once per day, while you are in the relative safety of a camp or stronghold, you
+can \emph{advance} your character. Either increase one stat by 1 point,
+costing scrap equal to 5 times your current stat total, or train one untrained
+skill, costing 20 scrap for each skill already trained.
 
 \section{Combat}
+A combat roll is an offensive skill, such as \stat{Brawn (Melee weapons)} versus
+a defensive skill, such as \stat{Wit (Agility)}. If the attacker succeeds, the
+defender takes damage equal to the difference between the rolls, up to a maximum
+specified by the weapon.
+
 Time in combat is broken down into \emph{ticks}, an abstract time period that
-can be taken to be approximately one second. During a tick, all act
-simultaneously. An \emph{action} could be making an attack, man\oe{}uvring your
-vehicle, or something else. 
+can be taken to be roughly a second. In each tick, players declare actions,
+which execute simultaneously.
 
 \begin{wraptable}[5]{l}{8ex}
   \small
@@ -125,41 +126,37 @@ vehicle, or something else.
 \end{tabular}
 \end{wraptable}
 
-Each action has a \emph{cooldown} period, which is a number of ticks before you
-can take action again. This includes the current tick, so after an Instant
-action you can move in the next tick. The possible cooldown lengths are shown in
-the table. 
+Every action has a \emph{cooldown} period, which is a number of ticks before you
+can act again. This includes the current tick, so after an Instant action you
+can move in the next tick.
 
 \subsection{Vehiclular combat}
 Vehicles are tracked on and off the road by three variables: \emph{position},
 \emph{speed} and \emph{direction}. Position and direction are always relative.
 During combat, the GM will keep track, and announce for each NPC combatant.
 
-When making a driving-related die roll, combine your Driving skill modifier with
-the stat modifier from the vehicle.
+When making a driving-related die roll, combine your \stat{Wit (Driving)}
+modifier with the stat modifier from the vehicle.
 
 \subsubsection{Man\oe{}uvring}
-Altering your speed, taking corners, and so on are all done by special actions
-called \emph{man\oe{}uvres}. They are taken like ordinary actions, but do not
-have effect until the end of the tick. All man\oe{}uvres in a tick execute
-simultaneously. 
+\emph{Man\oe{}uvres} are actions that alter your speed, let you take corners,
+and so on. They are taken like ordinary actions, except all man\oe{}uvres
+execute simultaneously at the end of the tick. 
 
 Most man\oe{}uvres do not require a roll to succeed. It's not difficult to push
-down a gas pedal, after all. It does take skill to squeeze out every bit of
-performance from your vehicle. For some man\oe{}uvres, you roll dice to
-determine how great an effect they have.
+down a gas pedal, but it does take skill to get the best out of your vehicle.
+For some man\oe{}uvres, you roll dice to determine how great an effect they
+have.
 
-You do not always have to choose between action and man\oe{}uvre: if you have
-already taken a non-man\oe{}uvre action, you can still take an Instant
-man\oe{}uvre in the same tick.
-
-If you do not man\oe{}uvre in a tick, you must take the man\oe{}uvre
+You do not always have to choose between action and man\oe{}uvre: even if you
+have taken a non-man\oe{}uvre action, you can still take an Instant man\oe{}uvre
+in the same tick. If you do not man\oe{}uvre, you must take the man\oe{}uvre
 \emph{Coast}.
 
 \subsubsection{Fuel}
-Most man\oe{}uvres cost \emph{fuel}. Each man\oe{}uvre lists how much fuel it
-requires. If you do not have enough fuel to perform a man\oe{}uvre, it cannot be
-taken. When you reach zero fuel, you must \emph{Coast}.
+Most man\oe{}uvres cost \emph{fuel}, listed in its description. You can only
+perform a man\oe{}uvre if you have enough fuel, and once you are out of fuel,
+you cannot man\oe{}uvre.
 
 \subsubsection{Damage, afflictions and repair}
 Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
@@ -176,11 +173,8 @@ TODO Repair
 
 \subsection{Hand-to-hand \& ranged combat}
 A hand-to-hand attack roll is the attacker's Brawn (Fisticuffs or Melee Weapons)
-against the defender's Brawn (Armour) or Wit (Agility). If the attacker
-succeeds, the defender takes damage equal to the difference between the rolls,
-up to a maximum specified by the weapon. 
-
-A ranged weapon attack roll is Brains (Ranged Weapons) versus Armour or Agility.
+against the defender's Brawn (Armour) or Wit (Agility). A ranged weapon attack
+roll is Brains (Ranged Weapons) versus Armour or Agility. 
 
 With a melee weapon, or unarmed, you can only attack a combatant within 3 feet
 of you, unless the weapon states otherwise. Ranged weapons specify their maximum
