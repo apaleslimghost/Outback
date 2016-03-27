@@ -14,15 +14,20 @@
 % font defs
 \newfontfamily\titlefont[]{AgencyFB Black}
 \newfontfamily\cursivefont[]{REDRUM}
-\setmainfont[Ligatures=TeX,Fractions=On]{DIN Next LT Pro Light}
+\newfontfamily\sectionfont[]{DIN Next LT Pro Bold}
+\setmainfont[
+  BoldFont={DIN Next LT Pro Medium},
+  Ligatures=TeX,
+  Fractions=On
+]{DIN Next LT Pro Light}
 
 % title fonts
 \pretitle{\fontsize{30}{30}\titlefont}
 \renewcommand{\maketitlehookd}{\vspace{-2ex}}
 \titleformat{\chapter}[block]{\cursivefont\Huge}{}{0pt}{}
-\titleformat{\section}[block]{\bfseries\LARGE}{}{0pt}{}
-\titleformat{\subsection}[block]{\bfseries\large}{}{0pt}{}
-\titleformat{\subsubsection}[block]{\bfseries}{}{0pt}{}
+\titleformat{\section}[block]{\sectionfont\LARGE}{}{0pt}{}
+\titleformat{\subsection}[block]{\sectionfont\large}{}{0pt}{}
+\titleformat{\subsubsection}[block]{\sectionfont}{}{0pt}{}
 
 % subtitle
 \newcommand{\subtitle}[1]{%
