@@ -63,12 +63,12 @@ The three stats that sum up a character's ability are \stat{Brains} (puzzles,
 navigation, repair,  etc), \stat{Brawn} (physical strength, taking a hit,
 running, etc) and \stat{Wit} (quick thinking, driving, bartering, etc).
 
-When making a roll that requires a particular skill, add your modifier for the
-appropriate stat to each roll. The GM will decide which stat is appropriate,
-depending on how you roleplay going about the task.
-
 These stats are ordinarily from 0 to 20; modifiers run from -5 to +5. Look up
-modifiers in the table, or calculate by adding 1 to the stat and halving, then subtracting 5.
+modifiers in the table, or calculate by adding 1 to the stat and halving, then
+subtracting 5.
+
+Your character might be \emph{trained} in certain skills. For rolls with these
+skills, add 1 to the stat modifier.
 
 \subsection{Vehicle stats}
 Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling},
@@ -92,8 +92,10 @@ Generate your three stats in one of the following ways:\\
 \textbf{Points:} choose three from 6 to 17, totalling no more than 40\\
 \textbf{Array:} assign 9, 14 and 17 to your stats
 
-Finally, choose three skills from the list to become \emph{trained} in. Rolls in
+Next, choose three skills from the list to become \emph{trained} in. Rolls in
 trained skills add an extra +1 to the modifier.
+
+Finally, TODO equipment
 
 \subsection{Combined modifiers}
 Sometimes, such as when rolling for Driving checks, you combine two
@@ -104,9 +106,9 @@ is +3.
 
 \section{Combat}
 Time in combat is broken down into \emph{ticks}, an abstract time period that
-can be taken to be approximately one second. During a tick, all parties that
-can do take action simultaneously. An \emph{action} could be making an attack,
-man\oe{}uvring your vehicle, or something else.
+can be taken to be approximately one second. During a tick, all act
+simultaneously. An \emph{action} could be making an attack, man\oe{}uvring your
+vehicle, or something else. 
 
 \begin{wraptable}[5]{l}{8ex}
   \small
@@ -151,8 +153,8 @@ You do not always have to choose between action and man\oe{}uvre: if you have
 already taken a non-man\oe{}uvre action, you can still take an Instant
 man\oe{}uvre in the same tick.
 
-If you cannot (or choose not to) man\oe{}uvre in a tick, you must take the
-man\oe{}uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
+If you do not man\oe{}uvre in a tick, you must take the man\oe{}uvre
+\emph{Coast}.
 
 \subsubsection{Fuel}
 Most man\oe{}uvres cost \emph{fuel}. Each man\oe{}uvre lists how much fuel it
@@ -161,13 +163,29 @@ taken. When you reach zero fuel, you must \emph{Coast}.
 
 \subsubsection{Damage, afflictions and repair}
 Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
-states otherwise. When a vehicle is reduced to zero hit points TODO
+states otherwise.
 
-\subsection{Hand-to-hand combat}
-Actions and ticks run the same in hand-to-hand combat as for vehicle combat. The only
-differences are movement and proximity. With a melee weapon, or unarmed, you can
-only attack a combatant within 3 feet of you, unless the weapon states
-otherwise. As an Instant man\oe{}uvre, you can run a number of feet up to 10
-plus your \stat{Brawn} modifier. 
+Certain attacks can cause \emph{afflictions}. These are statuses such as
+\emph{blowout} that adversely affect your vehicle's stats.
 
+When a vehicle reaches zero hit points, it is afflicted by \emph{engine fire}
+and cannot be man\oe{}uvred. If the fire is not dealt with in 5 ticks, the
+engine explodes, killing any occupants.
+
+TODO Repair
+
+\subsection{Hand-to-hand \& ranged combat}
+A hand-to-hand attack roll is the attacker's Brawn (Fisticuffs or Melee Weapons)
+against the defender's Brawn (Armour) or Wit (Agility). If the attacker
+succeeds, the defender takes damage equal to the difference between the rolls,
+up to a maximum specified by the weapon. 
+
+A ranged weapon attack roll is Brains (Ranged Weapons) versus Armour or Agility.
+
+With a melee weapon, or unarmed, you can only attack a combatant within 3 feet
+of you, unless the weapon states otherwise. Ranged weapons specify their maximum
+range. 
+
+While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
+plus your \stat{Brawn} modifier.
 \end{document}
