@@ -19,6 +19,8 @@
 ]
 
 \section{Welcome to the Wasteland}
+The world died. All that's left is the Wasteland: a vast desert dotted with
+strongholds of warring tribes. Only the mad survive.
 
 \subsection{Scrap}
 The useful leftovers of dead vehicles and scavenged ruins is \emph{scrap}. In
@@ -38,7 +40,7 @@ opponent succeeds.
 \section{Stats}
 \begin{wraptable}[9]{r}{6ex}
   \small
-\vspace*{-8ex}
+\vspace*{-3.5ex}
 \hspace*{-4.5ex}
 \begin{tabular}{cc}
   Stat  & Mod \\
@@ -57,18 +59,17 @@ opponent succeeds.
 \end{tabular}
 \end{wraptable}
 
-The three stats that sum up a character's ability are \stat{Brains} (mental
-aptitude), \stat{Brawn} (physical strength) and \stat{Wit} (quick thinking).
-Most of the time, these will be from 0 to 20, with a modifier from -5 to +5.
+The three stats that sum up a character's ability are \stat{Brains},
+\stat{Brawn} and \stat{Wit}. Most of the time, these will be from 0 to 20, with
+a modifier from -5 to +5. 
 
 Your character might be \emph{trained} in certain skills. For rolls with these
 skills, the modifier has an extra +1.
 
 \subsection{Vehicle stats}
 Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling},
-\stat{Acceleration}, \stat{Braking}, \stat{Ruggedness} and \stat{Weight}. A vehicle
-is just the sum of its parts. Each vehicle part --- engine, transmission, tyres
-etc.\ --- confers stats to the vehicle, and can be upgraded separately.
+\stat{Acceleration}, \stat{Brakes}, \stat{Ruggedness} and \stat{Weight}. Each
+vehicle part confers stats to the vehicle, and can be upgraded separately. 
 
 \stat{Speed} is different. It's not 0-20 like the others, but from 0 to your
 vehicle's \stat{Maximum Speed}, in \emph{feet per second}. It changes as you
@@ -82,17 +83,14 @@ your \stat{Wit} modifier is +4 and your vehicle's \stat{Handling} is +2, the
 combined modifier is +3.
 
 \section{Creating a character}
-Generate your three \emph{stats} in one of the following ways. \textbf{Dice:}
-roll \die{5d4} for each stat. \textbf{Points:} choose three from 6 to 17,
-totalling no more than 40. \textbf{Array:} assign 9, 14 and 17 to your stats.
-Next, choose three \emph{skills} from the list to become \emph{trained} in.
-Rolls in trained skills add an extra +1 to the modifier. Finally, starting with
-200 scrap, buy \emph{equipment} from the list (or choose one of the standard
-loadouts).
+Generate your stats in one of the following ways. \textbf{Dice:} roll \die{5d4}
+for each stat. \textbf{Points:} choose three from 6 to 17, totalling no more
+than 40. \textbf{Array:} assign 9, 14 and 17 to your stats. Next, choose three
+skills from the list to become trained in. Finally, starting with 200 scrap, buy
+equipment from the list (or choose one of the standard loadouts).
 
 \subsection{Hit points}
-\emph{Hit points (HP)} are you and your vehicle's ability to keep going. A
-character's \emph{Maximum HP} is equal to 3 times their \stat{Brawn} stat. A
+A character's Maximum HP is equal to 3 times their \stat{Brawn} stat. A
 vehicle's Maximum HP is 5 times its \stat{Ruggedness} stat.
 
 \subsection{Advancement}
@@ -109,7 +107,7 @@ specified by the weapon.
 
 Time in combat is broken down into \emph{ticks}, an abstract time period that
 can be taken to be roughly a second. In each tick, players declare actions,
-which execute simultaneously.
+which happen simultaneously.
 
 \begin{wraptable}[5]{l}{8ex}
   \small
@@ -126,49 +124,46 @@ which execute simultaneously.
 \end{tabular}
 \end{wraptable}
 
-Every action has a \emph{cooldown} period, which is a number of ticks before you
-can act again. This includes the current tick, so after an Instant action you
-can move in the next tick.
+Every action has a \emph{cooldown}, which is a number of ticks before you can
+act again. This includes the current tick, so after an \emph{Instant} action you
+can move in the next tick. 
 
 \subsection{Vehiclular combat}
-Vehicles are tracked on and off the road by three variables: \emph{position},
-\emph{speed} and \emph{direction}. Position and direction are always relative.
-During combat, the GM will keep track, and announce for each NPC combatant.
+Vehicles are tracked  by three variables: \emph{position}, \emph{speed} and
+\emph{direction}. Position and direction are always relative. During combat, the
+GM will keep track, and announce for each combatant.
 
-When making a driving-related die roll, combine your \stat{Wit (Driving)}
+When making a driving-related dice roll, combine your \stat{Wit (Driving)}
 modifier with the stat modifier from the vehicle.
+
+A vehicular attack is normally \stat{Wit (Driving) + Speed} versus \stat{Wit
+  (Driving) + Ruggedness}.
 
 \subsubsection{Man\oe{}uvring}
 \emph{Man\oe{}uvres} are actions that alter your speed, let you take corners,
 and so on. They are taken like ordinary actions, except all man\oe{}uvres
-execute simultaneously at the end of the tick. 
+execute at the end of the tick.
 
-Most man\oe{}uvres do not require a roll to succeed. It's not difficult to push
-down a gas pedal, but it does take skill to get the best out of your vehicle.
-For some man\oe{}uvres, you roll dice to determine how great an effect they
-have.
+Most man\oe{}uvres do not require a roll to succeed, but it does take skill to
+get the best out of your vehicle. For some man\oe{}uvres, you roll dice to
+determine how great an effect they have.
 
 You do not always have to choose between action and man\oe{}uvre: even if you
 have taken a non-man\oe{}uvre action, you can still take an Instant man\oe{}uvre
-in the same tick. If you do not man\oe{}uvre, you must take the man\oe{}uvre
-\emph{Coast}.
+in the same tick. If you do not man\oe{}uvre, you must \emph{Coast}.
 
 \subsubsection{Fuel}
-Most man\oe{}uvres cost \emph{fuel}, listed in its description. You can only
-perform a man\oe{}uvre if you have enough fuel.
+Most man\oe{}uvres cost \emph{fuel}; how much depends on the man\oe{}uvre. You
+can only man\oe{}uvre if you have enough fuel.
 
-\subsubsection{Damage, afflictions and repair}
+\subsubsection{Damage \& afflictions}
 Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
-states otherwise.
-
-Certain attacks can cause \emph{afflictions}. These are statuses such as
-\emph{blowout} that adversely affect your vehicle's stats.
+states otherwise. Certain attacks can cause \emph{afflictions}. These are
+statuses such as \emph{blowout} that adversely affect your vehicle's stats.
 
 When a vehicle reaches zero hit points, it is afflicted by \emph{engine fire}
 and cannot be man\oe{}uvred. If the fire is not dealt with in 5 ticks, the
 engine explodes, killing any occupants.
-
-TODO Repair
 
 \subsection{Hand-to-hand \& ranged combat}
 A hand-to-hand attack roll is the attacker's Brawn (Fisticuffs or Melee Weapons)
