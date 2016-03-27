@@ -17,7 +17,7 @@
 \setmainfont[Ligatures=TeX,Fractions=On]{DIN Next LT Pro Light}
 
 % title fonts
-\pretitle{\begin{center}\fontsize{50}{60}\titlefont}
+\pretitle{\fontsize{30}{30}\titlefont}
 \renewcommand{\maketitlehookd}{\vspace{-2ex}}
 \titleformat{\chapter}[block]{\cursivefont\Huge}{}{0pt}{}
 \titleformat{\section}[block]{\bfseries\LARGE}{}{0pt}{}
@@ -27,10 +27,8 @@
 % subtitle
 \newcommand{\subtitle}[1]{%
   \posttitle{%
-    \par\end{center}
-    \vspace{-10pt}
-    \begin{center}\LARGE\cursivefont#1\end{center}
-    \vskip0.5em}%
+    \hfill
+    \fontsize{30}{30}\cursivefont#1}%
 }
 
 % toc styling

@@ -6,13 +6,17 @@
 \date{}
 \pagenumbering{gobble}
 
-\renewcommand{\maketitlehooka}{\vspace{-60pt}}
-\renewcommand{\maketitlehookd}{\vspace{-35pt}\hrule\vspace{-15pt}}
+\renewcommand{\maketitlehooka}{\vspace{-30pt}}
+\renewcommand{\maketitlehookd}{\vspace{-40pt}}
 \geometry{bottom=0.75cm, left=0.75cm, right=0.75cm, top=0.75cm}
 \setlength{\parskip}{5pt}
 
 \begin{document}
-\maketitle
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+  \end{@twocolumnfalse}
+]
 
 \section{Conflict resolution}
 You and your opponent roll dice to see who succeeds. Your oppenent could be the
@@ -34,9 +38,9 @@ down is -2.
 
 \section{Stats}
 
-\begin{wraptable}[10]{r}{6ex}
+\begin{wraptable}[9]{r}{6ex}
   \small
-\vspace*{-7ex}
+\vspace*{-8ex}
 \hspace*{-4.5ex}
 \begin{tabular}{cc}
   Stat  & Mod \\
@@ -104,12 +108,12 @@ can be taken to be approximately one second. During a tick, all parties that
 can do take action simultaneously. An \emph{action} could be making an attack,
 man\oe{}uvring your vehicle, or something else.
 
-\begin{wraptable}[6]{l}{10ex}
+\begin{wraptable}[5]{l}{8ex}
   \small
-\vspace*{-3.5ex}
+\vspace*{-4ex}
 \hspace*{-4ex}
 \begin{tabular}{cc}
-  Cooldown & Ticks \\
+  Length   & Ticks \\
   \hline 
   Instant  & 1     \\
   Quick    & 2     \\
@@ -128,9 +132,6 @@ the table.
 Vehicles are tracked on and off the road by three variables: \emph{position},
 \emph{speed} and \emph{direction}. Position and direction are always relative.
 During combat, the GM will keep track, and announce for each NPC combatant.
-
-Here's an example: ``a Spotter, 50 feet ahead, at 60mph; a Rig, 70 feet ahead,
-at 55mph, and a Prickles, 600 feet ahead, at 90mph, coming towards you''.
 
 When making a driving-related die roll, combine your Driving skill modifier with
 the stat modifier from the vehicle.
@@ -153,12 +154,16 @@ man\oe{}uvre in the same tick.
 If you cannot (or choose not to) man\oe{}uvre in a tick, you must take the
 man\oe{}uvre \emph{Coast}. See the actions sheet for a list of man\oe{}uvres.
 
+\subsubsection{Fuel}
+Most man\oe{}uvres cost \emph{fuel}. Each man\oe{}uvre lists how much fuel it
+requires. If you do not have enough fuel to perform a man\oe{}uvre, it cannot be
+taken. When you reach zero fuel, you must \emph{Coast}.
+
 \subsubsection{Damage, afflictions and repair}
 Attacks to a vehicle damage the vehicle, not its occupants, unless the attack
 states otherwise. When a vehicle is reduced to zero hit points TODO
 
 \subsection{Hand-to-hand combat}
-
 Actions and ticks run the same in hand-to-hand combat as for vehicle combat. The only
 differences are movement and proximity. With a melee weapon, or unarmed, you can
 only attack a combatant within 3 feet of you, unless the weapon states
