@@ -3,3 +3,11 @@
 \renewcommand{\maketitlehookd}{\vspace{-40pt}}
 \geometry{bottom=0.75cm, left=0.75cm, right=0.75cm, top=0.75cm}
 \setlength{\parskip}{5pt}
+
+\newcommand{\compacttitle}{
+\twocolumn[
+  \begin{@twocolumnfalse}
+    \maketitle
+  \end{@twocolumnfalse}
+]
+}
