@@ -1,6 +1,7 @@
 \documentclass[10pt, a4paper, twocolumn]{article}
 \usepackage{outback}
 \usepackage{onepage}
+\usepackage{multirow}
 
 \title{\uppercase{Outback}}
 \date{}
@@ -199,31 +200,31 @@ plus your \stat{Brawn} modifier.
 \textbf{Primary stat:} Brawn\\
 \textbf{Secondary stat:} Brains\\
 \textbf{Skills:} armour, athletics, lore\\
-\textbf{Equipment:} 12-gauge shotgun, 6 12-gauge shells, leathers
+\textbf{Equipment:} 12-gauge shotgun \& 6 rounds, leathers
 \end{multicols}
 \begin{multicols}{2}
 \subsection{Wheelman}
 \textbf{Primary stat:} Wit\\
 \textbf{Secondary stat:} Brawn\\
 \textbf{Skills:} driving, grappling, initiative\\
-\textbf{Equipment:} 9mm pistol, 10 9mm rounds, blackthumb's tools
+\textbf{Equipment:} 9mm pistol \& 10 rounds, blackthumb's tools
 \subsection{Scavenger}
 \textbf{Primary stat:} Wit\\
 \textbf{Secondary stat:} Brains\\
 \textbf{Skills:} barter, navigation, scavenging\\
-\textbf{Equipment:} crowbar, looking glass, cartographer's kit
+\textbf{Equipment:} cartographer's kit, crowbar, looking glass
 \end{multicols}
 \begin{multicols}{2}
 \subsection{Longshot}
 \textbf{Primary stat:} Brains\\
 \textbf{Secondary stat:} Brawn\\
 \textbf{Skills:} armour, perception, ranged weapons\\
-\textbf{Equipment:} sniper rifle, 4 .308 rounds
+\textbf{Equipment:} sniper rifle \& 4 rounds
 \subsection{Blackthumb}
 \textbf{Primary stat:} Brains\\
 \textbf{Secondary stat:} Wit\\
 \textbf{Skills:} initiative, lore, repair\\
-\textbf{Equipment:} blackthumb's tools, 
+\textbf{Equipment:} blackthumb's tools, full jerry can
 \end{multicols}
 
 \section{Equipment}
@@ -256,21 +257,41 @@ plus your \stat{Brawn} modifier.
 \equipment{Blackthumb's tools}{100}{}{A standard set of vehicle-repair tools,
   including a wrench that can be used as a melee weapon with a maximum damage of
 10.}
-
-\equipment{Jerry can (full)}{50}{}{A fuel canister containing 4 gallons of
-  gasoline.}
-
-
 \equipment{Leathers}{60}{}{While wearing leathers, your \stat{Brawn (Armour)}
   modifier increases by 1.}
 
-\equipment{Looking glass}{100}{}{}
+\equipment{Looking glass}{100}{}{You can use the looking glass to see long
+  distances. While using it, your \stat{Brains (Perception)} modifier increases
+  by 1.}
 
-\equipment{Cartographer's kit}{80}{}{}
+\equipment{Cartographer's kit}{80}{}{Using this kit, you can create a map of the
+vicinity. This takes 30 minutes. Anyone that can access the map increases their
+\stat{Brains (Navigation)} modifier by 1 while in the area it covers.}
+
+\equipment{Jerry can}{10}{\hspace{2ex} \textbf{To fill:} 50 scrap}{A fuel
+  canister that can contain 4 gallons of gasoline.}  
+
 
 \section{Vehicle parts}
-
-
+\newcommand{\s}[1]{\small\stat{#1}}
+\begin{tabular}{rrccc}
+\multicolumn{2}{c}{\multirow{2}{10em}{Add stats from each row to get your total}}
+                                & Basic           & Improved        & Finest           \\
+             &                  & \small 30 scrap & \small 50 scrap & \small 100 scrap \\
+\hline
+Engine       & \s{Max speed}    & 0               & 10              & 30               \\
+             & \s{Acceleration} & 9               & 14              & 17               \\
+Transmission & \s{Max speed}    & 90              & 140             & 170              \\
+Aspiration   & \s{Acceleration} & 0               & 1               & 3                \\
+Tyres        & \s{Handling}     & 9               & 14              & 17               \\
+             & \s{Braking}      & 0               & 1               & 3                \\
+Suspension   & \s{Handling}     & 0               & 1               & 3                \\
+Brakes       & \s{Braking}      & 9               & 14              & 17               \\
+Chassis      & \s{Weight}       & 9               & 14              & 17               \\
+             & \s{Ruggedness}   & 0               & 1               & 3                \\
+Armour       & \s{Ruggedness}   & 9               & 14              & 17               \\
+             & \s{Weight}       & 0               & 1               & 3                \\
+\end{tabular}
 
 \section{Actions}
 \newcommand{\duration}[1]{
@@ -296,8 +317,5 @@ plus your \stat{Brawn} modifier.
 \manoeuvre{Maintain speed}{1}{1}{}
 \manoeuvre{Brake}{0}{2}{Roll \die{2d8} + BRK/2. At the end of the tick, subtract the result from your Speed.}
 \manoeuvre{Handbrake}{0}{8}{At the end of the tick, your Speed drops to 0.}
-
-
-
 
 \end{document}
