@@ -5,6 +5,10 @@
 \title{\uppercase{Outback}}
 \date{}
 
+\newenvironment{switch}[1]{%
+  \newcommand{\case}[2]{\ifdefequal{#1}{##1}{##2}{}}%
+}{}
+
 \begin{document}
 \subtitle{Cheat sheet}
 \compacttitle
@@ -53,7 +57,7 @@ opponent succeed.
 The three stats that sum up a character's ability are \stat{Brains},
 \stat{Brawn} and \stat{Wit}. Most of the time, these will be from 0 to 20, with
 a modifier from -5 to +5. 
-
+!
 Your character might be \emph{trained} in certain skills. For rolls with these
 skills, the modifier has an extra +1.
 
@@ -185,31 +189,115 @@ plus your \stat{Brawn} modifier.
 \end{tabular}
 
 \section{Character archetypes}
+\begin{multicols}{2}
 \subsection{Brawler}
 \textbf{Primary stat:} Brawn\\
 \textbf{Secondary stat:} Wit\\
-\textbf{Skills:} melee weapons, hand-to-hand, agility
+\textbf{Skills:} agility, hand-to-hand, melee weapons\\
+\textbf{Equipment:} knuckle dusters
 \subsection{Strategist}
 \textbf{Primary stat:} Brawn\\
 \textbf{Secondary stat:} Brains\\
-\textbf{Skills:} armour, athletics, lore
+\textbf{Skills:} armour, athletics, lore\\
+\textbf{Equipment:} 12-gauge shotgun, 6 12-gauge shells, leathers
+\end{multicols}
+\begin{multicols}{2}
 \subsection{Wheelman}
 \textbf{Primary stat:} Wit\\
 \textbf{Secondary stat:} Brawn\\
-\textbf{Skills:} driving, grappling, initiative
+\textbf{Skills:} driving, grappling, initiative\\
+\textbf{Equipment:} 9mm pistol, 10 9mm rounds, blackthumb's tools
 \subsection{Scavenger}
 \textbf{Primary stat:} Wit\\
 \textbf{Secondary stat:} Brains\\
-\textbf{Skills:} barter, navigation, scavenging
+\textbf{Skills:} barter, navigation, scavenging\\
+\textbf{Equipment:} crowbar, looking glass, cartographer's kit
+\end{multicols}
+\begin{multicols}{2}
 \subsection{Longshot}
 \textbf{Primary stat:} Brains\\
 \textbf{Secondary stat:} Brawn\\
-\textbf{Skills:} armour, perception, ranged weapons
+\textbf{Skills:} armour, perception, ranged weapons\\
+\textbf{Equipment:} sniper rifle, 4 .308 rounds
 \subsection{Blackthumb}
 \textbf{Primary stat:} Brains\\
 \textbf{Secondary stat:} Wit\\
-\textbf{Skills:} initiative, lore, repair
+\textbf{Skills:} initiative, lore, repair\\
+\textbf{Equipment:} blackthumb's tools, 
+\end{multicols}
+
+\section{Equipment}
+\newcommand{\equipment}[4]{
+  \subsection{#1}
+  \textbf{Cost:} #2 scrap #3
+
+#4
+}
+
+\equipment{Knuckle dusters}{30}{}{While wearing these knuckle dusters, your
+  hand-to-hand attacks have a maximum damage of 20.}
+
+\equipment{Crowbar}{20}{}{Melee weapon, with maximum damage of 12. Can also be
+  used to pry open containers, locked doors etc.. You make a \stat{Brawn} roll
+  against the object's \stat{Ruggedness}.}
+
+\equipment{Sniper rifle}{140}{\hspace{2ex} \textbf{Rounds:} 15 scrap each}{Ranged weapon,
+  with range 500 feet and maximum damage of 30. The attacking skill is
+  \stat{Brains (Perception)} and \stat{Brains (Ranged weapons)} combined.} 
+
+\equipment{12-gauge shotgun}{80}{\hspace{2ex} \textbf{Rounds:} 10 scrap
+  each}{Ranged weapon, with range 30 feet and maximum damage 20. You target all
+  combatants in a 3-foot radius; each combatant makes a separate defending
+  roll.} 
+
+\equipment{9mm pistol}{50}{\hspace{2ex} \textbf{Rounds:} 5 scrap
+  each}{Ranged weapon, with range 150 feet and maximum damage 15.}
+
+\equipment{Blackthumb's tools}{100}{}{A standard set of vehicle-repair tools,
+  including a wrench that can be used as a melee weapon with a maximum damage of
+10.}
+
+\equipment{Jerry can (full)}{50}{}{A fuel canister containing 4 gallons of
+  gasoline.}
+
+
+\equipment{Leathers}{60}{}{While wearing leathers, your \stat{Brawn (Armour)}
+  modifier increases by 1.}
+
+\equipment{Looking glass}{100}{}{}
+
+\equipment{Cartographer's kit}{80}{}{}
+
+\section{Vehicle parts}
+
+
+
+\section{Actions}
+\newcommand{\duration}[1]{
+\begin{switch}{#1}%
+  \case{1}{Instant (1 tick)}%
+  \case{2}{Quick (2 ticks)}%
+  \case{3}{Steady (3 ticks)}%
+  \case{5}{Slow (5 ticks)}%
+  \case{8}{Long (8 ticks)}%
+\end{switch}
+}
+
 
 \section{Man\oe{}uvres}
+\newcommand{\manoeuvre}[4]{
+\subsection{#1}
+\textbf{Fuel:} #2 \hspace{2ex} \textbf{Cooldown:} \duration{#3}
+
+#4
+}
+
+\manoeuvre{Accelerate}{2}{1}{Roll \die{2d8} + ACC/2. At the end of the tick, add the result to your Speed.}
+\manoeuvre{Maintain speed}{1}{1}{}
+\manoeuvre{Brake}{0}{2}{Roll \die{2d8} + BRK/2. At the end of the tick, subtract the result from your Speed.}
+\manoeuvre{Handbrake}{0}{8}{At the end of the tick, your Speed drops to 0.}
+
+
+
 
 \end{document}
