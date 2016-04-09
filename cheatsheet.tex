@@ -262,25 +262,37 @@ Armour       & \s{Ruggedness}   & 9               & 14              & 17        
   \case{3}{Steady (3 ticks)}%
   \case{5}{Slow (5 ticks)}%
   \case{8}{Long (8 ticks)}%
-\end{switch}
-}
+\end{switch}}
 
 \section{Man\oe{}uvres}
-\newcommand{\manoeuvre}[4]{
-\subsection{#1}
-\textbf{Fuel:} #2 \hspace{2ex} \textbf{Cooldown:} \duration{#3}
 
-#4
-}
+\begin{describe}{Coast}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+  Subtract 10 plus your \stat{Wit (Driving) + Weight} modifier from your \stat{Speed}.
+\end{describe}
 
-\manoeuvre{Coast}{0}{1}{Subtract 10 plus your \stat{Wit (Driving) + Weight} modifier from your \stat{Speed}.}
+\begin{describe}{Accelerate}
+  \prop{Fuel}{2}
+  \prop{Cooldown}{\duration{1}}
+  Roll \die{2d8} plus half your \stat{Wit (Driving) + Acceleration} modifier. Add the result to your \stat{Speed}.
+\end{describe}
 
-\manoeuvre{Accelerate}{2}{1}{Roll \die{2d8} plus half your \stat{Wit (Driving) + Acceleration} modifier. Add the result to your \stat{Speed}.}
+\begin{describe}{Maintain speed}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+\end{describe}
 
-\manoeuvre{Maintain speed}{1}{1}{}
+\begin{describe}{Brake}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{2}}
+  Roll \die{2d8} plus half your \stat{Wit (Driving) + Braking} modifier. Subtract the result from your \stat{Speed}.
+\end{describe}
 
-\manoeuvre{Brake}{0}{2}{Roll \die{2d8} plus half your \stat{Wit (Driving) + Braking} modifier. Subtract the result from your \stat{Speed}.}
-
-\manoeuvre{Handbrake}{0}{8}{At the end of the tick, your Speed drops to 0.}
+\begin{describe}{Handbrake}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{8}}
+  At the end of the tick, your Speed drops to 0.
+\end{describe}
 
 \end{document}
