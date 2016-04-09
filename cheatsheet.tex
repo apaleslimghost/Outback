@@ -173,29 +173,64 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
 \end{multicols}
 
 \section{Equipment}
-\newcommand{\equipment}[4]{
-  \textbf{\large #1:} \textbf{Cost} #2 scrap. #3 #4
-}
+\newcommand{\prop}[2]{\textbf{#1} #2.}
+\newenvironment{describe}[1]{
+  \textbf{\large #1:}
+}{}
 
-\equipment{Knuckle dusters}{30}{}{While wearing these knuckle dusters, your hand-to-hand attacks have a maximum damage of 20.}
+\begin{describe}{Knuckle dusters}
+  \prop{Cost}{30 scrap}
+  While wearing these knuckle dusters, your hand-to-hand attacks have a maximum damage of 20.
+\end{describe}
 
-\equipment{Crowbar}{20}{}{Melee weapon, with maximum damage of 12. Can also be used to pry open containers, locked doors etc.. You make a \stat{Brawn} roll against the object's \stat{Ruggedness}.}
+\begin{describe}{Crowbar}
+  \prop{Cost}{20 scrap}
+  Melee weapon, with maximum damage of 12. Can also be used to pry open containers, locked doors etc.. You make a \stat{Brawn} roll against the object's \stat{Ruggedness}.
+\end{describe}
 
-\equipment{Sniper rifle}{140}{\textbf{Rounds} 15 scrap each.}{Ranged weapon, with range 500 feet and maximum damage of 30. The attacking skill is \stat{Brains (Perception)} and \stat{Brains (Ranged weapons)} combined.}
+\begin{describe}{Sniper rifle}
+  \prop{Cost}{140 scrap}
+  \prop{Rounds}{15 scrap each}
+  Ranged weapon, with range 500 feet and maximum damage of 30. The attacking skill is \stat{Brains (Perception)} and \stat{Brains (Ranged weapons)} combined.
+\end{describe}
 
-\equipment{12-gauge shotgun}{80}{\textbf{Rounds} 10 scrap each.}{Ranged weapon, with range 30 feet and maximum damage 20. You target all combatants in a 3-foot radius; each combatant makes a separate defending roll.}
+\begin{describe}{12-gauge shotgun}
+  \prop{Cost}{80 scrap}
+  \prop{Rounds}{10 scrap each}
+  Ranged weapon, with range 30 feet and maximum damage 20. You target all combatants in a 3-foot radius; each combatant makes a separate defending roll.
+\end{describe}
 
-\equipment{9mm pistol}{50}{\textbf{Rounds} 5 scrap each.}{Ranged weapon, with range 150 feet and maximum damage 15.}
+\begin{describe}{9mm pistol}
+  \prop{Cost}{50 scrap}
+  \prop{Rounds}{5 scrap each}
+  Ranged weapon, with range 150 feet and maximum damage 15.
+\end{describe}
 
-\equipment{Blackthumb's tools}{100}{}{A standard set of vehicle-repair tools, including a wrench that can be used as a melee weapon with a maximum damage of 10.}
+\begin{describe}{Blackthumb's tools}
+  \prop{Cost}{100 scrap}
+  A standard set of vehicle-repair tools, including a wrench that can be used as a melee weapon with a maximum damage of 10.
+\end{describe}
 
-\equipment{Leathers}{60}{}{While wearing leathers, your \stat{Brawn (Armour)} modifier increases by 1.}
+\begin{describe}{Leathers}
+  \prop{Cost}{60 scrap}
+  While wearing leathers, your \stat{Brawn (Armour)} modifier increases by 1.
+\end{describe}
 
-\equipment{Looking glass}{100}{}{You can use the looking glass to see long distances. While using it, your \stat{Brains (Perception)} modifier increases by 1.}
+\begin{describe}{Looking glass}
+  \prop{Cost}{100 scrap}
+  You can use the looking glass to see long distances. While using it, your \stat{Brains (Perception)} modifier increases by 1.
+\end{describe}
 
-\equipment{Cartographer's kit}{80}{}{Using this kit, you can create a map of the vicinity. This takes 30 minutes. Anyone that can access the map increases their \stat{Brains (Navigation)} modifier by 1 while in the area it covers.}
+\begin{describe}{Cartographer's kit}
+  \prop{Cost}{80 scrap}
+  Using this kit, you can create a map of the vicinity. This takes 30 minutes. Anyone that can access the map increases their \stat{Brains (Navigation)} modifier by 1 while in the area it covers.
+\end{describe}
 
-\equipment{Jerry can}{10}{\textbf{To fill} 50 scrap.}{A fuel canister that can contain 4 gallons of gasoline.}
+\begin{describe}{Jerry can}
+  \prop{Cost}{10 scrap}
+  \prop{To fill}{50 scrap}
+  A fuel canister that can contain 4 gallons of gasoline.
+\end{describe}
 
 \section{Vehicle parts}
 \newcommand{\s}[1]{\small\stat{#1}}
