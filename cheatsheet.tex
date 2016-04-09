@@ -174,21 +174,18 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
 
 \section{Equipment}
 \newcommand{\equipment}[4]{
-  \subsection{#1}
-  \textbf{Cost:} #2 scrap #3
-
-#4
+  \textbf{\large #1:} \textbf{Cost} #2 scrap. #3 #4
 }
 
 \equipment{Knuckle dusters}{30}{}{While wearing these knuckle dusters, your hand-to-hand attacks have a maximum damage of 20.}
 
 \equipment{Crowbar}{20}{}{Melee weapon, with maximum damage of 12. Can also be used to pry open containers, locked doors etc.. You make a \stat{Brawn} roll against the object's \stat{Ruggedness}.}
 
-\equipment{Sniper rifle}{140}{\hspace{2ex} \textbf{Rounds:} 15 scrap each}{Ranged weapon, with range 500 feet and maximum damage of 30. The attacking skill is \stat{Brains (Perception)} and \stat{Brains (Ranged weapons)} combined.}
+\equipment{Sniper rifle}{140}{\textbf{Rounds} 15 scrap each.}{Ranged weapon, with range 500 feet and maximum damage of 30. The attacking skill is \stat{Brains (Perception)} and \stat{Brains (Ranged weapons)} combined.}
 
-\equipment{12-gauge shotgun}{80}{\hspace{2ex} \textbf{Rounds:} 10 scrap each}{Ranged weapon, with range 30 feet and maximum damage 20. You target all combatants in a 3-foot radius; each combatant makes a separate defending roll.}
+\equipment{12-gauge shotgun}{80}{\textbf{Rounds} 10 scrap each.}{Ranged weapon, with range 30 feet and maximum damage 20. You target all combatants in a 3-foot radius; each combatant makes a separate defending roll.}
 
-\equipment{9mm pistol}{50}{\hspace{2ex} \textbf{Rounds:} 5 scrap each}{Ranged weapon, with range 150 feet and maximum damage 15.}
+\equipment{9mm pistol}{50}{\textbf{Rounds} 5 scrap each.}{Ranged weapon, with range 150 feet and maximum damage 15.}
 
 \equipment{Blackthumb's tools}{100}{}{A standard set of vehicle-repair tools, including a wrench that can be used as a melee weapon with a maximum damage of 10.}
 
@@ -198,12 +195,12 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
 
 \equipment{Cartographer's kit}{80}{}{Using this kit, you can create a map of the vicinity. This takes 30 minutes. Anyone that can access the map increases their \stat{Brains (Navigation)} modifier by 1 while in the area it covers.}
 
-\equipment{Jerry can}{10}{\hspace{2ex} \textbf{To fill:} 50 scrap}{A fuel canister that can contain 4 gallons of gasoline.}
+\equipment{Jerry can}{10}{\textbf{To fill} 50 scrap.}{A fuel canister that can contain 4 gallons of gasoline.}
 
 \section{Vehicle parts}
 \newcommand{\s}[1]{\small\stat{#1}}
 \begin{tabular}{rrccc}
-\multicolumn{2}{c}{\multirow{2}{10em}{\footnotesize Add stats from each row to get your total}}
+\multicolumn{2}{c}{\multirow{2}{14em}{\footnotesize Exactly one of each part is required. Add together the stats from each row.}}
                                 & Basic           & Improved        & Finest           \\
              &                  & \small 30 scrap & \small 50 scrap & \small 100 scrap \\
 \hline
@@ -240,9 +237,13 @@ Armour       & \s{Ruggedness}   & 9               & 14              & 17        
 #4
 }
 
-\manoeuvre{Accelerate}{2}{1}{Roll \die{2d8} + ACC/2. At the end of the tick, add the result to your Speed.} \manoeuvre{Maintain speed}{1}{1}{}
+\manoeuvre{Coast}{0}{1}{Subtract 10 plus your \stat{Wit (Driving) + Weight} modifier from your \stat{Speed}.}
 
-\manoeuvre{Brake}{0}{2}{Roll \die{2d8} + BRK/2. At the end of the tick, subtract the result from your Speed.}
+\manoeuvre{Accelerate}{2}{1}{Roll \die{2d8} plus half your \stat{Wit (Driving) + Acceleration} modifier. Add the result to your \stat{Speed}.}
+
+\manoeuvre{Maintain speed}{1}{1}{}
+
+\manoeuvre{Brake}{0}{2}{Roll \die{2d8} plus half your \stat{Wit (Driving) + Braking} modifier. Subtract the result from your \stat{Speed}.}
 
 \manoeuvre{Handbrake}{0}{8}{At the end of the tick, your Speed drops to 0.}
 
