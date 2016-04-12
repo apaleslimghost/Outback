@@ -28,7 +28,7 @@ Each of you rolls a \die{d12}, adding modifiers. If the result is 12 or higher, 
 \section{Stats}
 \begin{wraptable}[9]{r}{6ex}
   \small
-\vspace*{-3.5ex}
+\vspace*{-4ex}
 \hspace*{-4.5ex}
 \begin{tabular}{cc}
   Stat  & Mod \\
@@ -69,7 +69,7 @@ A character's Maximum HP is equal to 3 times their \stat{Brawn} stat. A vehicle'
 Once per day, while you are in the relative safety of a camp or stronghold, you can \emph{advance} your character. Either increase one stat by 1 point, costing scrap equal to 5 times your current stat total, or train one untrained skill, costing 20 scrap for each skill already trained.
 
 \section{Combat}
-A combat roll is an offensive skill, such as \stat{Brawn (Melee weapons)} versus a defensive skill, such as \stat{Wit (Agility)}. If the attacker succeeds, the defender takes damage equal to the difference between the rolls, up to a maximum specified by the weapon.
+A combat roll is an offensive skill, such as \stat{Brawn (Melee weapons)}, versus a defensive skill, e.g.\ \stat{Wit (Agility)}. If the attacker succeeds, the defender takes damage equal to the difference between the rolls. Each weapon has a maximum damage.
 
 Time in combat is broken down into \emph{ticks}, an abstract time period that can be taken to be roughly a second. In each tick, players declare actions, which happen simultaneously.
 
@@ -93,18 +93,15 @@ Every action has a \emph{cooldown}, which is a number of ticks before you can ac
 \subsection{Vehiclular combat}
 Vehicles are tracked  by three variables: \emph{position}, \emph{speed} and \emph{direction}. Position and direction are always relative. During combat, the GM will keep track, and announce for each combatant.
 
-When making a driving-related dice roll, combine your \stat{Wit (Driving)} modifier with the stat modifier from the vehicle.
-
-A vehicular attack is normally \stat{Wit (Driving) + Speed} versus \stat{Wit (Driving) + Ruggedness}.
+When making a driving-related dice roll, combine your \stat{Wit (Driving)} modifier with the stat modifier from the vehicle. A vehicular attack is normally \stat{Wit (Driving) + Speed} versus \stat{Wit (Driving) + Ruggedness}.
 
 \subsubsection{Man\oe{}uvring}
-\emph{Man\oe{}uvres} are actions that alter your speed, let you take corners, and so on. They are taken like ordinary actions, except all man\oe{}uvres execute at the end of the tick.
+\emph{Man\oe{}uvres} are actions that alter your speed, let you take corners, and so on. They are taken like ordinary actions, except all man\oe{}uvres execute at the end of the tick. You do not always have to choose between action and man\oe{}uvre: even if you have taken a non-man\oe{}uvre action, you can still take an Instant man\oe{}uvre in the same tick.
 
 Most man\oe{}uvres do not require a roll to succeed, but it does take skill to get the best out of your vehicle. For some man\oe{}uvres, you roll dice to determine how great an effect they have.
 
-You do not always have to choose between action and man\oe{}uvre: even if you have taken a non-man\oe{}uvre action, you can still take an Instant man\oe{}uvre in the same tick. If you do not man\oe{}uvre, you must \emph{Coast}.
+If you do not man\oe{}uvre, or you take a man\oe{}uvre that does not otherwise affect your speed, subtract 10 plus your vehicle's \stat{Weight} modifier from your speed.
 
-\subsubsection{Fuel}
 Most man\oe{}uvres cost \emph{fuel}; how much depends on the man\oe{}uvre. You can only man\oe{}uvre if you have enough fuel.
 
 \subsubsection{Damage \& afflictions}
@@ -124,7 +121,7 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
 \compacttitle
 
 \section{Skills}
-\begin{tabular}{lll}
+{\small\begin{tabular}{lll}
   Brawn         & Wit        & Brains         \\
   \hline
   Armour        & Agility    & Lore           \\
@@ -132,7 +129,7 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
   Grappling     & Driving    & Perception     \\
   Hand-to-hand  & Initiative & Ranged weapons \\
   Melee weapons & Scavenging & Repair
-\end{tabular}
+\end{tabular}}
 
 \section{Character archetypes}
 \begin{multicols}{2}
@@ -171,7 +168,7 @@ While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10
 \textbf{Skills:} initiative, lore, repair\\
 \textbf{Equipment:} blackthumb's tools, full jerry can
 \end{multicols}
-
+\vspace*{-1em}
 \section{Equipment}
 \newcommand{\prop}[2]{\textbf{#1} #2.}
 \newenvironment{describe}[1]{
@@ -264,13 +261,22 @@ Armour       & \s{Ruggedness}   & 9               & 14              & 17        
   \case{8}{Long (8 ticks)}%
 \end{switch}}
 
-\section{Man\oe{}uvres}
-
-\begin{describe}{Coast}
-  \prop{Fuel}{0}
-  \prop{Cooldown}{\duration{1}}
-  Subtract 10 plus your \stat{Wit (Driving) + Weight} modifier from your \stat{Speed}.
+\begin{describe}{Repair}
+  \prop{Cooldown}{\duration{8}}
+  Choose a vehicle you have access to or character within 3 feet. Roll \die{2d8} plus half your \stat{Brains (Repair)} modifier. Add the result to the HP of the target.
 \end{describe}
+
+\begin{describe}{Quick repair}
+  \prop{Cooldown}{\duration{2}}
+  Choose a vehicle you have access to or character within 3 feet. Roll \stat{Brains (Repair)} against the target's damage (their \stat{Max HP} minus their \stat{Current HP}). If you succeed, the damage is removed.
+\end{describe}
+
+\begin{describe}{Remove Affliction}
+  \prop{Cooldown}{\duration{5}}
+  Choose a vehicle you have access to or character within 3 feet. Roll \stat{Brains (Repair)} against the target's damage (their \stat{Max HP} minus their \stat{Current HP}). If you succeed, the damage is removed.
+\end{describe}
+
+\section{Man\oe{}uvres}
 
 \begin{describe}{Accelerate}
   \prop{Fuel}{2}
@@ -281,6 +287,7 @@ Armour       & \s{Ruggedness}   & 9               & 14              & 17        
 \begin{describe}{Maintain speed}
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{1}}
+  Your \stat{Speed} does not change at the end of the tick.
 \end{describe}
 
 \begin{describe}{Brake}
@@ -293,6 +300,22 @@ Armour       & \s{Ruggedness}   & 9               & 14              & 17        
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{8}}
   At the end of the tick, your Speed drops to 0.
+\end{describe}
+
+\begin{describe}{Corner}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+  Roll \stat{Wit (Driving) + Handling}
+\end{describe}
+
+\section{Afflictions}
+
+\begin{describe}{Blowout}
+  Subtract 5 from your vehicle's \stat{Handling} and 50 from its \stat{Top Speed}.
+\end{describe}
+
+\begin{describe}{Engine fire}
+  Subtract 5 from your vehicle's \stat{Acceleration}. If this affliction is not removed in 5 ticks (including the tick it was added), your vehicle explodes, killing any occupants.
 \end{describe}
 
 \end{document}
