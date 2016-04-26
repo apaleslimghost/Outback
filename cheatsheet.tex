@@ -11,92 +11,18 @@
 }{}
 
 \begin{document}
-\subtitle{Cheat sheet}
+\subtitle{Basic Rules}
 \compacttitle
 
 \section{Welcome to the Wasteland}
 The world died. All that's left is the Wasteland: a vast desert dotted with strongholds of warring tribes. Only the mad survive.
 
-\subsection{Conflict resolution}
-When undertaking a difficult task, you and your opponent roll dice to see who succeeds. Your oppenent is usually the GM, rolling for an NPC or the environment, or it could be another player.
+\input{sections/resolution}
+\input{sections/combined}
+\input{sections/combat}
+\input{sections/manoevring}
 
-Each of you rolls a \die{d12}, adding modifiers. If the result is 12 or higher, write down ``12'', and roll again. Once your roll and modifier is less than 12, stop rolling. Add up the twelves and the final roll, and that's the score. If your score is greater than your opponent's, you succeed; otherwise, your opponent succeeds.
-
-\subsection{Combined modifiers}
-Sometimes, such as when rolling for driving checks, modifiers from two sources apply. Combine them by taking the average of the two modifiers. For example, if your \stat{Wit} modifier is +4 and your vehicle's \stat{Handling} is +2, the combined modifier is +3.
-
-\subsection{Combat}
-A combat roll is an offensive skill, such as \stat{Brawn (Melee weapons)}, versus a defensive skill, e.g.\ \stat{Wit (Agility)}. If the attacker succeeds, the defender takes damage equal to the difference between the rolls. Each weapon has a maximum damage.
-
-Time in combat is broken down into \emph{ticks}, an abstract time period that can be taken to be roughly a second. In each tick, players declare actions, which happen simultaneously.
-
-\begin{wraptable}[5]{r}{8ex}
-  \small
-\vspace*{-4ex}
-\hspace*{-4.5ex}
-\begin{tabular}{cc}
-  Length   & Ticks \\
-  \hline
-  Instant  & 1     \\
-  Quick    & 2     \\
-  Steady   & 3     \\
-  Slow     & 5     \\
-  Long     & 8
-\end{tabular}
-\end{wraptable}
-
-Every action has a \emph{cooldown}, which is a number of ticks before you can act again. This includes the current tick, so after an \emph{Instant} action you can move in the next tick.
-
-\subsection{Man\oe{}uvring}
-\emph{Man\oe{}uvres} are actions that move you around the battlefield: running, accelerating, braking and so on. They are taken like ordinary actions, except all man\oe{}uvres execute at the end of the tick.
-
-You do not always have to choose between action and man\oe{}uvre: even if you have taken a non-man\oe{}uvre action, you can still take an Instant man\oe{}uvre in the same tick. However, if you're in the cooldown of another action, you cannot man\oe{}uvre.
-
-Most man\oe{}uvres do not require a roll to succeed, but it does take skill to get the best out of your vehicle. For some man\oe{}uvres, you roll dice to determine how great an effect they have.
-
-\subsection{Scrap}
-The useful leftovers of dead vehicles and scavenged ruins is \emph{scrap}. In the Wasteland, it's a currency, buying you gasoline, bullets, even vehicle parts and training.
-
-\section{Characters}
-\subsection{Stats}
-
-\begin{wraptable}[9]{r}{6ex}
-  \small
-\vspace*{-8ex}
-\hspace*{-4.5ex}
-\begin{tabular}{cc}
-  Stat  & Mod \\
-  \hline
-  0     & -5       \\
-  1-2   & -4       \\
-  3-4   & -3       \\
-  5-6   & -2       \\
-  7-8   & -1       \\
-  9-10  &  0       \\
-  11-12 & +1       \\
-  13-14 & +2       \\
-  15-16 & +3       \\
-  17-18 & +4       \\
-  19-20 & +5
-\end{tabular}
-\end{wraptable}
-
-The three stats that sum up a character's ability are \stat{Brains}, \stat{Brawn} and \stat{Wit}. Most of the time, these will be from 0 to 20, with a modifier from -5 to +5. A character's \stat{Maximum HP} is equal to 3 times their \stat{Brawn} stat.
-
-Your character might be \emph{trained} in certain skills. For rolls with these skills, add 1 to the usual modifier.
-
-\subsection{Creating a character}
-Generate your stats in one of the following ways. \textbf{Dice:} roll \die{5d4} for each stat. \textbf{Points:} choose three from 6 to 17, totalling no more than 40. \textbf{Array:} assign 9, 14 and 17 to your stats. Next, choose three skills from the list to become trained in. Finally, starting with 200 scrap, buy equipment from the list (or choose one of the standard loadouts).
-
-\subsection{Advancement}
-Once per day, while you are in the relative safety of a camp or stronghold, you can \emph{advance} your character. Either increase one stat by 1 point, costing scrap equal to 5 times your current stat total, or train one untrained skill, costing 20 scrap for each skill already trained.
-
-\subsection{Hand-to-hand \& ranged combat}
-A hand-to-hand attack roll is the attacker's \stat{Brawn (Fisticuffs or Melee Weapons)} against the defender's \stat{Brawn (Armour)} or \stat{Wit (Agility)}. A ranged weapon attack roll has \stat{Brains (Ranged Weapons)} as the offensive skill.
-
-With a melee weapon, or unarmed, you can only attack a combatant within 3 feet of you, unless the weapon states otherwise. Ranged weapons specify their maximum range.
-
-While on foot, as an Instant man\oe{}uvre, you can run a number of feet up to 10 plus your \stat{Brawn} modifier.
+\input{sections/characters}
 
 \section{Vehicles}
 \subsection{Stats}
@@ -121,7 +47,7 @@ Attacks to a vehicle damage the vehicle, not its occupants, unless the attack st
 When a vehicle reaches zero hit points, it is afflicted by \emph{engine fire} and cannot be man\oe{}uvred. If the fire is not dealt with in 5 ticks, the engine explodes, killing any occupants.
 
 \clearpage
-\subtitle{Lists and Tables}
+\subtitle{Extended Rules}
 \compacttitle
 
 \section{Skills}
@@ -232,28 +158,6 @@ When a vehicle reaches zero hit points, it is afflicted by \emph{engine fire} an
   \prop{To fill}{50 scrap}
   A fuel canister that can contain 4 gallons of gasoline.
 \end{describe}
-
-\section{Vehicle parts}
-\newcommand{\s}[1]{\small\stat{#1}}
-\let\xs\scriptsize
-\begin{tabular}{>{\small}rrccc}
-\multicolumn{2}{c}{\multirow{2}{12em}{\vspace*{-3pt}\xs Exactly one of each part is required. Add together the stats from each row.}}
-                                & \small Basic & \small Improved & \small Finest \\
-             &                  & \xs 30 scrap & \xs 50 scrap    & \xs 100 scrap \\
-\hline
-Engine       & \s{Max speed}    & 0               & 10              & 30         \\
-             & \s{Acceleration} & 9               & 14              & 17         \\
-Transmission & \s{Max speed}    & 90              & 140             & 170        \\
-Aspiration   & \s{Acceleration} & 0               & 1               & 3          \\
-Tyres        & \s{Handling}     & 9               & 14              & 17         \\
-             & \s{Braking}      & 0               & 1               & 3          \\
-Suspension   & \s{Handling}     & 0               & 1               & 3          \\
-Brakes       & \s{Braking}      & 9               & 14              & 17         \\
-Chassis      & \s{Weight}       & 9               & 14              & 17         \\
-             & \s{Ruggedness}   & 0               & 1               & 3          \\
-Armour       & \s{Ruggedness}   & 9               & 14              & 17         \\
-             & \s{Weight}       & 0               & 1               & 3          \\
-\end{tabular}
 
 \section{Actions}
 \newcommand{\duration}[1]{
