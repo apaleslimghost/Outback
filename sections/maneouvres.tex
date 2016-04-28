@@ -1,0 +1,33 @@
+% !TEX root = ../cheatsheet.tex
+
+\section{Man\oe{}uvres}
+
+\begin{describe}{Accelerate}
+  \prop{Fuel}{2}
+  \prop{Cooldown}{\duration{1}}
+  Roll \die{2d8} plus half your \stat{Wit (Driving) + Acceleration} modifier. Add the result to your \stat{Speed}.
+\end{describe}
+
+\begin{describe}{Maintain speed}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+  Your \stat{Speed} does not change at the end of the tick.
+\end{describe}
+
+\begin{describe}{Brake}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{2}}
+  Roll \die{2d8} plus half your \stat{Wit (Driving) + Braking} modifier. Subtract the result from your \stat{Speed}.
+\end{describe}
+
+\begin{describe}{Handbrake}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{8}}
+  At the end of the tick, your Speed drops to 0.
+\end{describe}
+
+\begin{describe}{Corner}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+  Roll \stat{Wit (Driving) + Handling}
+\end{describe}
