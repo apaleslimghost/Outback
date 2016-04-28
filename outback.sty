@@ -1,3 +1,5 @@
+% !TEX root = cheatsheet.tex
+
 \usepackage[english]{babel}
 \usepackage{fontspec}
 \usepackage{titlesec}
@@ -71,3 +73,33 @@
 \newenvironment{describe}[1]{
   \textbf{\large #1:}
 }{}
+
+\newenvironment{switch}[1]{%
+  \newcommand{\case}[2]{\ifdefequal{#1}{##1}{##2}{}}%
+}{}
+
+\newcommand{\duration}[1]{
+\begin{switch}{#1}%
+  \case{1}{Instant (1 tick)}%
+  \case{2}{Quick (2 ticks)}%
+  \case{3}{Steady (3 ticks)}%
+  \case{5}{Slow (5 ticks)}%
+  \case{8}{Long (8 ticks)}%
+\end{switch}}
+
+\newcounter{sectiondepth}
+\setcounter{sectiondepth}{0}
+\newenvironment{abstractsection}[1]{%
+  \ifnum\thesectiondepth=0%
+    \section{#1}
+  \fi%
+  \ifnum\thesectiondepth=1%
+    \subsection{#1}
+  \fi%
+  \ifnum\thesectiondepth=2%
+    \subsubsection{#1}
+  \fi%
+  \stepcounter{sectiondepth}
+}{
+  \addtocounter{sectiondepth}{-1}
+}
