@@ -21,30 +21,8 @@ The world died. All that's left is the Wasteland: a vast desert dotted with stro
 \input{sections/combined}
 \input{sections/combat}
 \input{sections/manoevring}
-
 \input{sections/characters}
-
-\section{Vehicles}
-\subsection{Stats}
-Vehicles have separate sets of stats: \stat{Speed}, \stat{Handling}, \stat{Acceleration}, \stat{Brakes}, \stat{Ruggedness} and \stat{Weight}. Each vehicle part confers stats to the vehicle, and can be upgraded separately.
-
-\stat{Speed} is different. It's not 0-20 like the others, but from 0 to your vehicle's \stat{Maximum Speed}, in \emph{feet per second}. It changes as you man\oe{}uvre your vehicle. Convert it to a 0-20 stat by dividing by 10, and to a modifier from the stat in the usual way.
-
-A vehicle's \stat{Maximum HP} is 5 times its \stat{Ruggedness} stat.
-
-\subsection{Combat}
-When making a driving-related dice roll, combine your \stat{Wit (Driving)} modifier with the stat modifier from the vehicle. A vehicular attack is normally \stat{Wit (Driving) + Speed} versus \stat{Wit (Driving) + Ruggedness}.
-
-Vehicles are tracked on the road by three variables: \emph{position}, \emph{speed} and \emph{direction}. Position and direction are always relative. At the end of each tick, players apply the result of any man\oe{}uvres to their speed, then the GM adds each combatant's speed to their position to get their position for the next tick.
-
-If you do not man\oe{}uvre, or you take a man\oe{}uvre that does not otherwise affect your speed, subtract 10 plus your vehicle's \stat{Weight} modifier from your speed. This is \emph{coasting}.
-
-Most man\oe{}uvres cost \emph{fuel}; how much depends on the man\oe{}uvre. You can only man\oe{}uvre if you have enough fuel.
-
-\subsubsection{Damage \& afflictions}
-Attacks to a vehicle damage the vehicle, not its occupants, unless the attack states otherwise. Certain attacks can cause \emph{afflictions}. These are statuses such as \emph{blowout} that adversely affect your vehicle's stats.
-
-When a vehicle reaches zero hit points, it is afflicted by \emph{engine fire} and cannot be man\oe{}uvred. If the fire is not dealt with in 5 ticks, the engine explodes, killing any occupants.
+\input{sections/vehicles}
 
 \clearpage
 \subtitle{Extended Rules}
