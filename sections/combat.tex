@@ -4,10 +4,13 @@ A combat roll is an offensive skill, such as \stat{Brawn (Melee weapons)}, versu
 
 Time in combat is broken down into \emph{ticks}, an abstract time period that can be taken to be roughly a second. In each tick, players declare actions, which happen simultaneously.
 
-\begin{wraptable}[5]{r}{10ex}
-  \small
-\vspace*{-4ex}
-\hspace*{-4.5ex}
+\begin{multicols}{2}
+
+Every action has a \emph{cooldown}, which is a number of ticks before you can act again. This includes the current tick, so after an \emph{Instant} action you can move in the next tick.
+
+\vfill\columnbreak
+
+\begin{center}
 \begin{tabular}{cc}
   Cooldown & Ticks \\
   \hline
@@ -17,6 +20,6 @@ Time in combat is broken down into \emph{ticks}, an abstract time period that ca
   Slow     & 5     \\
   Long     & 8
 \end{tabular}
-\end{wraptable}
+\end{center}
 
-Every action has a \emph{cooldown}, which is a number of ticks before you can act again. This includes the current tick, so after an \emph{Instant} action you can move in the next tick.
+\end{multicols}
