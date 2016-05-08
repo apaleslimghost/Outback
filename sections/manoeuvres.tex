@@ -4,7 +4,7 @@
 \begin{describe}{Accelerate}
   \prop{Fuel}{2}
   \prop{Cooldown}{\duration{1}}
-  Roll \die{2d8} plus half your \stat{Wit (Driving) + Acceleration} modifier. Add the result to your \stat{Speed}.
+  Roll \die{2d8} plus half your \combined{\stat[Driving]{Wit}}{\stat{Acceleration}} modifier. Add the result to your \stat{Speed}.
 \end{describe}
 
 \begin{describe}{Maintain speed}
@@ -16,7 +16,7 @@
 \begin{describe}{Brake}
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{2}}
-  Roll \die{2d8} plus half your \stat{Wit (Driving) + Braking} modifier. Subtract the result from your \stat{Speed}.
+  Roll \die{2d8} plus half your \combined{\stat[Driving]{Wit}}{\stat{Braking}} modifier. Subtract the result from your \stat{Speed}.
 \end{describe}
 
 \begin{describe}{Handbrake}
@@ -28,5 +28,5 @@
 \begin{describe}{Corner}
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{1}}
-  Roll \stat{Wit (Driving) + Handling}
+  Roll \combined{\stat[Driving]{Wit}}{\stat{Handling}}
 \end{describe}

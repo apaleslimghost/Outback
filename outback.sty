@@ -67,10 +67,12 @@
 \renewcommand{\mainmatter}{\oldmainmatter\patchcmd{\chapter}{empty}{fancy}{}{}}\providecommand{\mainmatter}{}
 
 % shorthand commands
-\newcommand{\die}[1]{\emph{\textbf{#1}}}
-\newcommand{\stat}[1]{\textbf{#1}}
+\newcommand*{\die}[1]{\emph{\textbf{#1}}}
+\newcommand*{\stat}[2][]{%
+\mbox{\textbf{\ifthenelse{\equal{#1}{}}{#2}{#2~(#1)}}}}
+\newcommand*{\combined}[2]{\textbf{#1~+~#2}}
 
-\newcommand{\prop}[2]{\textbf{#1} #2.}
+\newcommand*{\prop}[2]{\textbf{#1} #2.}
 \newenvironment{describe}[1]{
   \textbf{\large #1:}
 }{}
@@ -79,7 +81,7 @@
   \newcommand{\case}[2]{\ifdefequal{#1}{##1}{##2}{}}%
 }{}
 
-\newcommand{\duration}[1]{
+\newcommand*{\duration}[1]{
 \begin{switch}{#1}%
   \case{1}{Instant (1 tick)}%
   \case{2}{Quick (2 ticks)}%
