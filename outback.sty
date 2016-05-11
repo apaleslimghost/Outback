@@ -72,9 +72,9 @@
 \mbox{\textbf{\ifthenelse{\equal{#1}{}}{#2}{#2~(#1)}}}}
 \newcommand*{\combined}[2]{\textbf{#1~×~#2}}
 
-\newcommand*{\prop}[2]{\textbf{#1} #2.}
+\newcommand*{\prop}[2]{\emph{#1:}~#2\enspace}
 \newenvironment{describe}[1]{
-  \textbf{\large #1:}
+  \textbf{\large #1}
 }{}
 
 \newcommand*{\orr}{\textmd{\emph{or}} }
