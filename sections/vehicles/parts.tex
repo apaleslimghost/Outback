@@ -1,13 +1,15 @@
 % !TEX root = ../../cheatsheet.tex
 
-\newcommand{\s}[1]{\small\stat{#1}}
+\let\s\stat
 \let\xs\scriptsize
 
-Exactly one of each part is required. When creating a vehicle for a new character, it can cost at most 400 scrap.
+Exactly one of each part is required. Each part contributes to one or two stats of your vehicle: add together the numbers for each stat from each part. For example, to find your vehicle's \stat{Acceleration}, add the values from the Engine and Aspiration rows.
 
-\begin{tabularx}{\linewidth}{>{\small}rXccc}
+When creating a vehicle for a new character, it can cost at most 400 scrap.
+
+\begin{tabularx}{\linewidth}{rXccc}
              &                   & \small Basic & \small Improved & \small Finest \\
-             &                   & \xs 20 scrap & \xs 50 scrap    & \xs 100 scrap \\
+Part         & Stats             & \xs 20 scrap & \xs 50 scrap    & \xs 100 scrap \\
 \hline
 Engine       & \s{Max speed}     & 0            & 10              & 30         \\
              & \s{Acceleration}  & 9            & 14              & 17         \\
