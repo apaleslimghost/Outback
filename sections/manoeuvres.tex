@@ -26,6 +26,12 @@ If you don't man\oe{}uvre in a tick, or you take a man\oe{}uvre that doesn't aff
   At the end of the tick, your Speed drops to 0.
 \end{describe}
 
+\begin{describe}{Evade}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{5}}
+  During this man\oe{}uvre's cooldown, you may use \combined{\stat[Driving]{Wit}}{\stat{Handling}} as the skill to defend against any vehicular attack.
+\end{describe}
+
 \begin{describe}{Corner}
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{1}}
@@ -33,5 +39,5 @@ If you don't man\oe{}uvre in a tick, or you take a man\oe{}uvre that doesn't aff
 \end{describe}
 
 \begin{abstractsection}{Collisions}
-  When your vehicle collides with an obstacle, roll \stat{Speed} versus the GM's single \die{d12}. If you ``succeed'', your vehicle takes damage equal to the difference. Your \stat{Speed} drops to 0. A collision has \duration{5} cooldown, and you cannot man\oe{}uvre in this tick. 
+  When your vehicle collides with an obstacle, roll \stat{Speed} versus the GM's single \die{d12}. If you ``succeed'', your vehicle takes damage equal to the difference. Your \stat{Speed} drops to 0. A collision has \duration{5} cooldown, and you cannot man\oe{}uvre in this tick.
 \end{abstractsection}
