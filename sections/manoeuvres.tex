@@ -1,16 +1,17 @@
 % !TEX root = ../cheatsheet.tex
 
+If you don't man\oe{}uvre in a tick, or you take a man\oe{}uvre that doesn't affect your speed, subtract 10 plus your vehicle's \stat{Weight} modifier from your speed.
+
+\begin{describe}{Maintain speed}
+  \prop{Fuel}{0}
+  \prop{Cooldown}{\duration{1}}
+  Your \stat{Speed} doesn't change at the end of the tick.
+\end{describe}
 
 \begin{describe}{Accelerate}
   \prop{Fuel}{2}
   \prop{Cooldown}{\duration{1}}
   Roll \die{2d8} plus half your \combined{\stat[Driving]{Wit}}{\stat{Acceleration}} modifier. Add the result to your \stat{Speed}.
-\end{describe}
-
-\begin{describe}{Maintain speed}
-  \prop{Fuel}{0}
-  \prop{Cooldown}{\duration{1}}
-  Your \stat{Speed} does not change at the end of the tick.
 \end{describe}
 
 \begin{describe}{Brake}
@@ -28,5 +29,9 @@
 \begin{describe}{Corner}
   \prop{Fuel}{0}
   \prop{Cooldown}{\duration{1}}
-  Roll \combined{\stat[Driving]{Wit}}{\stat{Handling}}
+  The GM will warn you 8 ticks before you will reach a bend in the road (at your current speed). Roll \combined{\stat[Driving]{Wit}}{\stat{Handling}} against the \stat{Difficulty} of the terrain when you reach the bend. If you succeed, you make it around the corner. If you fail (or do not take this man\oe{}uvre), you leave the road. Depending on the environment, you may continue off-road, become stuck, or hit an obstacle.
 \end{describe}
+
+\begin{abstractsection}{Collisions}
+  When your vehicle collides with an obstacle, roll \stat{Speed} versus the GM's single \die{d12}. If you ``succeed'', your vehicle takes damage equal to the difference. Your \stat{Speed} drops to 0. A collision has \duration{5} cooldown, and you cannot man\oe{}uvre in this tick. 
+\end{abstractsection}
