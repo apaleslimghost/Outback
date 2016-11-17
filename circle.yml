@@ -3,6 +3,7 @@ dependencies:
     - sudo apt-get update; sudo apt-get install texlive-xetex latexmk xzdec
     - curl -k -L -o github-release.tar.bz2 https://github.com/aktau/github-release/releases/download/v0.6.2/linux-amd64-github-release.tar.bz2
     - tar -jxf github-release.tar.bz2
+    -tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final
     - tlmgr init-usertree
   override:
     - ./scripts/tlinstall.sh
