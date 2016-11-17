@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - sudo apt-get update; sudo apt-get install texlive latexmk xzdec
+    - sudo apt-get update; sudo apt-get install texlive texlive-xetex latexmk xzdec
     - curl -k -L -o github-release.tar.bz2 https://github.com/aktau/github-release/releases/download/v0.6.2/linux-amd64-github-release.tar.bz2
     - tar -jxf github-release.tar.bz2
     - tlmgr init-usertree
