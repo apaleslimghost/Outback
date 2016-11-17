@@ -10,7 +10,7 @@ dependencies:
 
 test:
   override:
-    - latexmk -halt-on-error
+    - latexmk -halt-on-error -xelatex
 
 deployment:
   release:
