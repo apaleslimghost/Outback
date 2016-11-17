@@ -3,8 +3,8 @@ dependencies:
     - sudo apt-get update; sudo apt-get install texlive texlive-xetex latexmk xzdec
     - curl -k -L -o github-release.tar.bz2 https://github.com/aktau/github-release/releases/download/v0.6.2/linux-amd64-github-release.tar.bz2
     - tar -jxf github-release.tar.bz2
-    - curl -k -L -o outback-fonts.tgz https://s3.amazonaws.com/outback-fonts/fonts.tar.bz2
-    - mkdir -p ~/fonts
+    - curl -k -L -o outback-fonts.tar.bz2 https://s3.amazonaws.com/outback-fonts/fonts.tar.bz2
+    - mkdir -p ~/.fonts
     - tar jxf outback-fonts.tar.bz2 -C ~/.fonts
     - tlmgr init-usertree
     - tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final
