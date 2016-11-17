@@ -1,0 +1,18 @@
+dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install texlive-xetex latexmk
+    - curl -k -L -o github-release.tar.bz2 https://github.com/aktau/github-release/releases/download/v0.6.2/linux-amd64-github-release.tar.bz2
+    - tar -jxf github-release.tar.bz2
+  post:
+    - ./scripts/tlinstall.sh
+
+test:
+  override:
+    - latexmk
+
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    owner: quarterto
+    commands:
+      - ./scripts/publish-pdf.sh

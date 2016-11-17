@@ -1,0 +1,12 @@
+multirow
+babel
+fontspec
+titlesec
+titling
+lipsum
+parskip
+fancyhdr
+etoolbox
+xcolor
+wrapfig
+geometry
