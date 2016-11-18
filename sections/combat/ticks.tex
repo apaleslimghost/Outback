@@ -5,9 +5,9 @@ Time in combat is broken down into \emph{ticks}, an abstract time period that ca
 Every action has a \emph{cooldown}, which is a number of ticks before you can act again. This includes the current tick, so after an \emph{Instant} action you can move in the next tick.
 
 {\footnotesize
-  \textbf{Instant} \hnspace 1 tick  \hfill
-  \textbf{Quick}   \hnspace 2 ticks \hfill
-  \textbf{Steady}  \hnspace 3 ticks \hfill
-  \textbf{Slow}    \hnspace 5 ticks \hfill
-  \textbf{Long}    \hnspace 8 ticks \hspace*{-5ex} % for some reason
+  \textbf{Instant} \hnspace \durationInstant{} tick  \hfill
+  \textbf{Quick}   \hnspace \durationQuick{}   ticks \hfill
+  \textbf{Steady}  \hnspace \durationSteady{}  ticks \hfill
+  \textbf{Slow}    \hnspace \durationSlow{}    ticks \hfill
+  \textbf{Long}    \hnspace \durationLong{}    ticks \hspace*{-5ex} % for some reason
 }
