@@ -1,16 +1,16 @@
 % !TEX root = ../outback-basic-and-extended.tex
 
 \begin{describe}{Blowout}
-  \prop{Difficulty}{+1}
-  Subtract 5 from the vehicle's \stat{Handling} and 50 from its \stat{Top Speed}. If your \stat{Speed} is above your temporary \stat{Top Speed}, it immediately reduces to the \stat{Top Speed}.
+  \prop{Difficulty}{-2}
+  Subtract 5 from the vehicle's \stat{Handling} and 2 from its \stat{Speed}.
 \end{describe}
 
 \begin{describe}{Engine fire}
-  \prop{Difficulty}{+4}
-  Subtract 5 from the vehicle's \stat{Acceleration}. If the affliction isn't removed in 5 ticks, the vehicle explodes, killing any occupants.
+  \prop{Difficulty}{+5}
+  Subtract 5 from the vehicle's \stat{Acceleration} and \stat{Speed}. If the affliction isn't removed by the end of the setpiece, the vehicle explodes, and any occupants are presumed dead.
 \end{describe}
 
 \begin{describe}{Unconsciousness}
   \prop{Difficulty}{+4}
-  You can't act or man\oe{}uvre. If the affliction isn't removed in 13 ticks, you die.
+  You can't act or man\oe{}uvre. At the end of the setpiece, unconcious charaters must roll \stat{Wit} against death. If the result is \textbf{less than 6}, you're presumed dead. If it's \textbf{more than 12}, you're still kicking, and you start the next setpiece with hit points equal to how much more than 12 you rolled.
 \end{describe}
