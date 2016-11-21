@@ -68,9 +68,7 @@
 
 % shorthand commands
 \newcommand*{\die}[1]{\emph{\textbf{#1}}}
-\newcommand*{\stat}[2][]{%
-\textbf{\ifthenelse{\equal{#1}{}}{#2}{#2}}}
-\newcommand*{\combined}[2]{\textbf{#1 \textbullet{} #2}}
+\newcommand*{\stat}[1]{\textbf{#1}}
 
 \newcommand*{\prop}[2]{\emph{#1:}~#2\enspace}
 \newenvironment{describe}[1]{
@@ -80,25 +78,6 @@
 \newcommand*{\orr}{\textmd{\emph{or}} }
 
 \newcommand*{\hnspace}{\hspace{0.3em}}
-
-\newenvironment{switch}[1]{%
-  \newcommand{\case}[2]{\ifdefequal{#1}{##1}{##2}{}}%
-}{}
-
-\def\durationInstant{1}
-\def\durationQuick  {2}
-\def\durationSteady {3}
-\def\durationSlow   {4}
-\def\durationLong   {5}
-
-\newcommand*{\duration}[1]{%
-\begin{switch}{#1}%
-\case{\durationInstant}{Instant (\durationInstant{} tick)}%
-\case{\durationQuick}{Quick (\durationQuick{} ticks)}%
-\case{\durationSteady}{Steady (\durationSteady{} ticks)}%
-\case{\durationSlow}{Slow (\durationSlow{} ticks)}%
-\case{\durationLong}{Long (\durationLong{} ticks)}%
-\end{switch}}
 
 \newcounter{sectiondepth}
 \setcounter{sectiondepth}{0}

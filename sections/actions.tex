@@ -1,56 +1,47 @@
 % !TEX root = ../outback-basic-and-extended.tex
 
-\begin{describe}{Hand-to-hand}
-  \prop{Cooldown}{\duration{\durationQuick}}
-  \prop{Range}{melee}
+Here's a few examples of actions you can take on your turn. This is not an exhaustive list! First describe what you want to do, and together with the GM determine how many actions that entails and whether any of the require rolls.
+
+\begin{abstractsection}{Attacks}
+\vspace{1ex}
+
+\begin{describe}{Unarmed hand-to-hand}
   \prop{Maximum damage}{5}
-  \stat[Hand-to-hand]{Brawn} vs \stat[Armour]{Brawn} \orr \stat[Agility]{Wit}
+  attack with \stat{Brawn} versus \stat{Wit}.
 \end{describe}
 
-\begin{describe}{Melee weapon}
-  \stat[Melee weapons]{Brawn} vs \stat[Armour]{Brawn} \orr \stat[Agility]{Wit}
+\begin{describe}{Close-range weapon}
+  attack with \stat{Brawn} versus \stat{Wit}.
 \end{describe}
 
-\begin{describe}{Ranged weapon}
-  \stat[Ranged weapons]{Brains} vs \stat[Armour]{Brawn} \orr \stat[Agility]{Wit}
+\begin{describe}{Long-range weapon}
+  attack with \stat{Brains} versus \stat{Wit}.
 \end{describe}
 
 \begin{describe}{Shunt}
-  \prop{Cooldown}{\duration{\durationSlow}}
-  \prop{Range}{vehicle within 25 feet with speed lower than yours}
   \prop{Maximum damage}{20}
-  \combined{\stat[Driving]{Wit}}{\stat{Speed}} vs \combined{\stat{Speed}}{\stat{Ruggedness}}. At the end of the tick, your speed becomes the same as the target's. You may not man\oe{}uvre in this tick.
+  vehicular attack with \stat{Speed} vs \stat{Speed}.
 \end{describe}
 
 \begin{describe}{Ram}
-  \prop{Cooldown}{\duration{\durationLong}}
-  \prop{Range}{vehicle within 25 feet that is stationary or travelling in the opposite direction to you}
   \prop{Maximum damage}{30}
-  \combined{\stat[Driving]{Wit}}{\stat{Speed}} vs \stat{Ruggedness}. At the end of the tick, your and the target's speed becomes zero. Neither of you may man\oe{}uvre in this tick.
+  vehicular attack with \stat{Speed} vs \stat{Ruggedness}.
 \end{describe}
 
 \begin{describe}{Sideswipe}
-  \prop{Cooldown}{\duration{\durationSteady}}
-  \prop{Range}{vehicle within 25 feet}
   \prop{Maximum damage}{10}
-  \combined{\stat[Driving]{Wit}}{\stat{Handling}} vs \combined{\stat[Driving]{Wit}}{\stat{Ruggedness}}
+  vehicular attack with \stat{Handling} vs \stat{Ruggedness}.
 \end{describe}
+\end{abstractsection}
 
-\begin{abstractsection}{Repair actions}
+\begin{abstractsection}{Repairs}
 \vspace{1ex}
 
 \begin{describe}{Repair}
-  \prop{Cooldown}{\duration{\durationLong}}
-  Choose a vehicle you have access to or character within 3 feet. Roll \die{1d8} plus  your \stat[Repair]{Brains} modifier. Add the result to the HP of the target.
-\end{describe}
-
-\begin{describe}{Quick repair}
-  \prop{Cooldown}{\duration{\durationQuick}}
-  Choose a vehicle you have access to or character within 3 feet. The target's HP increases at a cost of 6 scrap minus your \stat[Repair]{Brains} modifier per hit point.
+  Choose a vehicle you have access to or character within 3 feet. Roll \die{1d8} plus  your \stat{Brains} modifier. Add the result to the HP of the target.
 \end{describe}
 
 \begin{describe}{Remove Affliction}
-  \prop{Cooldown}{\duration{\durationLong}}
-  Requires Blackthumb's Tools. Choose a vehicle you have access to or character within 3 feet. Roll \stat[Repair]{Brains} against the difficulty of an affliciton of the target.  If you succeed, the affliction is removed.
+  Requires Blackthumb's Tools. Choose a vehicle you have access to or character within 3 feet. Roll \stat{Brains} against the difficulty of an affliciton of the target.  If you succeed, the affliction is removed.
 \end{describe}
 \end{abstractsection}
