@@ -3,9 +3,11 @@
 packages="texlive texlive-xetex latexmk xzdec"
 
 if [ ! -d ~/.apt ] ; then
-	mkdir -p ~/.apt/{archives,lock,partial}
+	mkdir -p ~/.apt
+	pushd ~/.apt
 	sudo apt-get update
-	apt-get -d -o=dir::cache=~/.apt install $packages
+	sudo apt-get download $packages
+	popd
 fi
 
 ls ~/.apt
