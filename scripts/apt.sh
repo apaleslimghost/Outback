@@ -8,7 +8,8 @@ if [ ! -d ~/.apt ] ; then
 	mkdir -p ~/.apt
 	pushd ~/.apt
 	sudo apt-get update
-	deps=$(apt-cache depends -i $packages | awk '/Depends:/ {print $2}' | xargs echo) 
+	sudo apt-get install apt-rdepends
+	deps=$(apt-rdepends $packages | awk '/Depends:/ {print $2}' | xargs echo) 
 	sudo apt-get download $packages $deps
 	popd
 fi
