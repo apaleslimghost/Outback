@@ -12,6 +12,8 @@
 \usepackage{wrapfig}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{adjustbox}
 \usepackage[toc]{multitoc}
 \usepackage[a4paper, top=1cm, bottom=2cm, inner=2cm, outer=1cm, left=1cm]{geometry}
 
@@ -70,7 +72,33 @@
 \newcommand*{\die}[1]{\emph{\textbf{#1}}}
 \newcommand*{\stat}[1]{\textbf{#1}}
 
-\newcommand*{\prop}[2]{\emph{#1:}~#2\enspace}
+\definecolor{charcoal}{gray}{0.3}
+
+\makeatletter
+\newcommand{\labelbox}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+7pt}%
+  \begin{tcolorbox}[
+    before=\adjustbox{raise=-0.7ex}\bgroup,
+    after=\egroup,
+    colframe=charcoal,
+    colback=white,
+    coltext=charcoal,
+    boxrule=0.5pt,
+    arc=2pt,
+    left=3pt,
+    right=3pt,
+    top=3pt,
+    bottom=2pt,
+    boxsep=0pt,
+    width=\@tempdima
+  ]
+      #1
+  \end{tcolorbox}
+}
+\makeatother
+
+\newcommand*{\prop}[2]{\labelbox{\footnotesize\textbf{#1}\enspace{}#2}}
 \newenvironment{describe}[1]{
   \textbf{\large #1}
 }{}

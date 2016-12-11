@@ -10,3 +10,8 @@ etoolbox
 xcolor
 wrapfig
 geometry
+tcolorbox
+environ
+trimspaces
+adjustbox
+collectbox
