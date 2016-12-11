@@ -1,4 +1,6 @@
-#/bin/sh
+#/bin/bash
+
+set -x -e
 
 packages="texlive texlive-xetex latexmk xzdec"
 
