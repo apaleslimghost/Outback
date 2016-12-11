@@ -10,4 +10,4 @@ if [ ! -d ~/.apt ] ; then
 	popd
 fi
 
-ls ~/.apt
+sudo dpkg --install --recursive ~/.apt

@@ -1,7 +1,7 @@
 dependencies:
   pre:
-    - sudo apt-get update
-    - sudo apt-get install texlive texlive-xetex latexmk xzdec
+#    - sudo apt-get update
+#    - sudo apt-get install texlive texlive-xetex latexmk xzdec
     - sh scripts/apt.sh
     - curl -k -L -o github-release.tar.bz2 https://github.com/aktau/github-release/releases/download/v0.6.2/linux-amd64-github-release.tar.bz2
     - tar -jxf github-release.tar.bz2
@@ -12,6 +12,8 @@ dependencies:
     - tlmgr option repository ftp://tug.org/historic/systems/texlive/2013/tlnet-final
   override:
     - ./scripts/tlinstall.sh
+  cache_directories:
+    - ~/.apt
 
 test:
   override:
