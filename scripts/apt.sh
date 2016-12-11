@@ -10,7 +10,7 @@ if [ ! -d ~/.apt ] ; then
 	sudo apt-get update
 	sudo apt-get install apt-rdepends
 	deps=$(apt-rdepends $packages | awk '/Depends:/ {print $2}' | xargs echo) 
-	sudo apt-get download $packages $deps
+	sudo apt-get download --ignore-missing $packages $deps
 	popd
 fi
 
