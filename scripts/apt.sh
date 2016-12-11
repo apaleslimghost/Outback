@@ -2,7 +2,7 @@
 
 set -x -e
 
-packages="texlive texlive-xetex latexmk xzdec"
+packages="texlive-base texlive-latex-base texlive-binaries tipa tex-common texlive-fonts-recommended texlive-latex-recommended texlive texlive-xetex latexmk xzdec"
 
 if [ ! -d ~/.apt ] ; then
 	mkdir -p ~/.apt
