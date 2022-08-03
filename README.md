@@ -12,4 +12,4 @@ Or let the [CI server](https://circleci.com/gh/quarterto/outback) do it, it's al
 
 ## Licence
 
-Outback will eventually be licenced under a permissive licence if I decide to go anywhere with it (and that WB don't care). For now it's &copy; 2016 Bren Brightwell, all rights reserved.
+Outback will eventually be licenced under a permissive licence if I decide to go anywhere with it (and that WB don't care). For now it's &copy; 2016 Kara Brightwell, all rights reserved.
